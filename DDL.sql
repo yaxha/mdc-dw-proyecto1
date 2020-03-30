@@ -167,7 +167,7 @@ CREATE TABLE IF NOT EXISTS personas(
 /*Los horarios del box ya estan definidos y son: 5:00AM, 6:00AM, 7:00AM, 12:00PM, 
   4:30PM, 5:30PM, 6:30PM, 7:30PM., 8:00AM, 9:30AM y 11:00AM). */
 CREATE TABLE IF NOT EXISTS horario(
-    id_horario     INT PRIMARY KEY  NOT NULL,
+    id_horario     INT PRIMARY KEY  NOT NULL,https://github.com/yaxha/mdc-dw-proyecto1
     hora_inicio    VARCHAR(10),
     hora_fin       VARCHAR(10)
 );
@@ -262,7 +262,7 @@ CREATE TRIGGER trg_sesiones_atleta
             GROUP BY S.fecha, S.dpi_entrenador) > 3
         THEN
             SIGNAL SQLSTATE '45002'
-                SET MESSAGE_TEXT = 'Este entrenador no pudo ser adherido a la sesión porque ya ha dado 3 sesiones este día';
+                SET MESSAGE_TEXT = 'Este entrenador no pudo ser adherido a la sesión porque ya ha dado 3 sesiones este día.';
         END IF;
     END;
 
@@ -303,7 +303,8 @@ CREATE TABLE IF NOT EXISTS historial_pr(
 
 /*
 Trigger para validar que solo se inserten valores donde el peso sea mayor al record anterior
-Y que sea un movimiento que permita records personales
+* Que sea un movimiento que permita records personales
+* Que el atleta esté solvente para registrar su record
 */
 CREATE TRIGGER trg_insert_pr
     BEFORE INSERT ON historial_pr FOR EACH ROW
@@ -313,20 +314,27 @@ CREATE TRIGGER trg_insert_pr
             FROM movimientos m
             WHERE m.id_movimiento = NEW.id_movimiento) = 'S'
         THEN
-            # Verificar que el peso nuevo es mayor al registrado previamente
-            IF (SELECT pr.peso_pr
-                FROM historial_pr pr
-                WHERE pr.dpi_atleta = NEW.dpi_atleta
-                    AND pr.id_especialidad = NEW.id_especialidad
-                    AND pr.id_movimiento = NEW.id_movimiento) > NEW.peso_pr
+            # Verificar que esté solvente
+            IF (SELECT p.estado
+                FROM personas p
+                WHERE p.dpi = NEW.dpi_atleta) <> 0
             THEN
-                SIGNAL SQLSTATE '45003'
-                    SET MESSAGE_TEXT = 'Record no insertado porque ya existe uno con mayor peso para este atleta en este movimiento ';
+                # Verificar que el peso nuevo es mayor al registrado previamente
+                IF (SELECT pr.peso_pr
+                    FROM historial_pr pr
+                    WHERE pr.dpi_atleta = NEW.dpi_atleta
+                        AND pr.id_especialidad = NEW.id_especialidad
+                        AND pr.id_movimiento = NEW.id_movimiento) > NEW.peso_pr
+                THEN
+                    SIGNAL SQLSTATE '45003'
+                        SET MESSAGE_TEXT = 'Record no insertado porque ya existe uno con mayor peso para este atleta en este movimiento.';
+                END IF;
+            ELSE
+                SIGNAL SQLSTATE '45004'
+                    SET MESSAGE_TEXT = 'Este atleta no está solvente. No se registrará su record.';
             END IF;
         ELSE
-            SIGNAL SQLSTATE '45004'
-                SET MESSAGE_TEXT = 'Este movimiento no permite records personales';
+            SIGNAL SQLSTATE '45005'
+                SET MESSAGE_TEXT = 'Este movimiento no permite records personales.';
         END IF;
-
-
     END;
