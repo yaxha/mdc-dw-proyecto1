@@ -44,12 +44,6 @@ CREATE TABLE IF NOT EXISTS modalidad(
     descripcion     VARCHAR(300)
 );
 
-/*Los tipos de rx son: RX+_masculino, RX+_femenino, Rx_masculino, RX:femenino, Scaled.*/
-CREATE TABLE IF NOT EXISTS tipo_rx(
-    id_tipo_rx    INT PRIMARY KEY NOT NULL,
-    nombre        VARCHAR(100)
-);
-
 /*El tipo de puntuación depende de la modalidad del wod, estos pueden ser: rondas, tiempo*/
 CREATE TABLE IF NOT EXISTS tipo_puntuacion(
     id_tipo_puntuacion    INT PRIMARY KEY NOT NULL,
@@ -60,26 +54,23 @@ CREATE TABLE IF NOT EXISTS wod(
     id_wod                INT PRIMARY KEY NOT NULL,
     nombre                VARCHAR(100),
     duracion_minutos      INT,
-    peso_rx               INT,
+    rx_masculino          INT,
+    rx_feminino           INT,
     puntuacion_meta       INT,
     descanso              VARCHAR(50),
     descripcion           VARCHAR(200),
     id_modalidad          INT  NOT NULL,
     id_categoria          INT  NOT NULL,
-    id_tipo_rx            INT  NOT NULL,
     id_tipo_puntuacion    INT  NOT NULL,
 
     INDEX Ref46(id_modalidad),
     INDEX Ref57(id_categoria),
-    INDEX Ref68(id_tipo_rx),
     INDEX Ref189(id_tipo_puntuacion),
 
     FOREIGN KEY (id_modalidad)
         REFERENCES modalidad(id_modalidad),
     FOREIGN KEY (id_categoria)
         REFERENCES categoria_wod(id_categoria),
-    FOREIGN KEY (id_tipo_rx)
-        REFERENCES tipo_rx(id_tipo_rx),
     FOREIGN KEY (id_tipo_puntuacion)
         REFERENCES tipo_puntuacion(id_tipo_puntuacion)
 );
@@ -208,7 +199,8 @@ CREATE TABLE IF NOT EXISTS sesion(
 CREATE TABLE IF NOT EXISTS detalle_sesion(
     id_sesion      INT  NOT NULL,
     dpi_atleta     INT  NOT NULL,
-    record_wod        VARCHAR(10),
+    record_wod     VARCHAR(10),
+    rx_plus        INT,
     puntuacion_wod    DECIMAL(4, 2),
     PRIMARY KEY (id_sesion, dpi_atleta),
 
