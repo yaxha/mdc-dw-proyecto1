@@ -8,6 +8,33 @@ Autores:
 CREATE DATABASE IF NOT EXISTS CROSSFIT;
 USE CROSSFIT;
 
+/*Las movimientos de forma individual pueden tener distintas formas de ser medidos,
+  ejemplos: altura caja, peso, etc.*/
+CREATE TABLE IF NOT EXISTS unidad_medida(
+    id_u_medida    INT  PRIMARY KEY NOT NULL,
+    nombre         VARCHAR(200)
+);
+
+
+CREATE TABLE IF NOT EXISTS movimientos(
+    id_movimiento     INT PRIMARY KEY NOT NULL,
+    nombre            VARCHAR(300),
+	nombre_corto      VARCHAR(50),
+    descripcion       VARCHAR(500),
+    permite_pr        CHAR(1),
+    tipo_ejercicio    VARCHAR(50),
+    id_u_medida       INT NOT NULL,
+    id_area_mov       INT NOT NULL,
+
+    INDEX Ref24(id_u_medida),
+    INDEX Ref175(id_area_mov),
+
+    FOREIGN KEY (id_u_medida)
+        REFERENCES unidad_medida(id_u_medida),
+    FOREIGN KEY (id_area_mov)
+        REFERENCES area_movimiento(id_area_mov)
+);
+
 /*Esta tabla hace referencia a si el ejercicio es del área de gimnasia, levantamientos de peso,
   acondicionamiento metabólico, etc*/
 CREATE TABLE IF NOT EXISTS area_movimiento(
@@ -34,6 +61,21 @@ CREATE TABLE IF NOT EXISTS especialidad(
     nombre_area_especialidad    VARCHAR(100),
     duracion_munutos            INT,
     descripcion                 VARCHAR(200)
+);
+
+CREATE TABLE IF NOT EXISTS detalle_especialidad(
+    id_especialidad    INT  NOT NULL,
+    id_movimiento      INT  NOT NULL,
+    cantidad_reps      INT  NOT NULL,
+    PRIMARY KEY (id_especialidad, id_movimiento),
+
+    INDEX Ref910(id_especialidad),
+    INDEX Ref311(id_movimiento),
+
+    FOREIGN KEY (id_especialidad)
+        REFERENCES especialidad(id_especialidad),
+    FOREIGN KEY (id_movimiento)
+        REFERENCES movimientos(id_movimiento)
 );
 
 /*Un wod puede tener diferentes modalidades, las cuales pueden ser: AMRAP, EMOM, For Time,
@@ -75,6 +117,20 @@ CREATE TABLE IF NOT EXISTS wod(
         REFERENCES tipo_puntuacion(id_tipo_puntuacion)
 );
 
+CREATE TABLE IF NOT EXISTS detalle_wod(
+    id_wod           INT  NOT NULL,
+    id_movimiento    INT  NOT NULL,
+    cantidad_reps    INT,
+    PRIMARY KEY (id_wod, id_movimiento),
+
+    INDEX Ref712(id_wod),
+    INDEX Ref313(id_movimiento),
+
+    FOREIGN KEY (id_wod)
+        REFERENCES wod(id_wod),
+    FOREIGN KEY (id_movimiento)
+        REFERENCES movimientos(id_movimiento)
+);
 
 CREATE TABLE IF NOT EXISTS clase(
     id_clase           INT PRIMARY KEY NOT NULL,
@@ -93,48 +149,6 @@ CREATE TABLE IF NOT EXISTS clase(
         REFERENCES especialidad(id_especialidad),
     FOREIGN KEY (id_wod)
         REFERENCES wod(id_wod)
-);
-
-/*Las movimientos de forma individual pueden tener distintas formas de ser medidos,
-  ejemplos: altura caja, peso, etc.*/
-CREATE TABLE IF NOT EXISTS unidad_medida(
-    id_u_medida    INT  PRIMARY KEY NOT NULL,
-    nombre         VARCHAR(200)
-);
-
-
-CREATE TABLE IF NOT EXISTS movimientos(
-    id_movimiento     INT PRIMARY KEY NOT NULL,
-    nombre            VARCHAR(300),
-	nombre_corto      VARCHAR(50),
-    descripcion       VARCHAR(500),
-    permite_pr        CHAR(1),
-    tipo_ejercicio    VARCHAR(50),
-    id_u_medida       INT NOT NULL,
-    id_area_mov       INT NOT NULL,
-
-    INDEX Ref24(id_u_medida),
-    INDEX Ref175(id_area_mov),
-
-    FOREIGN KEY (id_u_medida)
-        REFERENCES unidad_medida(id_u_medida),
-    FOREIGN KEY (id_area_mov)
-        REFERENCES area_movimiento(id_area_mov)
-);
-
-CREATE TABLE IF NOT EXISTS detalle_especialidad(
-    id_especialidad    INT  NOT NULL,
-    id_movimiento      INT  NOT NULL,
-    cantidad_reps      INT  NOT NULL,
-    PRIMARY KEY (id_especialidad, id_movimiento),
-
-    INDEX Ref910(id_especialidad),
-    INDEX Ref311(id_movimiento),
-
-    FOREIGN KEY (id_especialidad)
-        REFERENCES especialidad(id_especialidad),
-    FOREIGN KEY (id_movimiento)
-        REFERENCES movimientos(id_movimiento)
 );
 
 /*Una persona puede ser Atleta o Entrenador*/
@@ -211,21 +225,6 @@ CREATE TABLE IF NOT EXISTS detalle_sesion(
         REFERENCES sesion(id_sesion),
     FOREIGN KEY (dpi_atleta)
         REFERENCES personas(dpi)
-);
-
-CREATE TABLE IF NOT EXISTS detalle_wod(
-    id_wod           INT  NOT NULL,
-    id_movimiento    INT  NOT NULL,
-    cantidad_reps    INT,
-    PRIMARY KEY (id_wod, id_movimiento),
-
-    INDEX Ref712(id_wod),
-    INDEX Ref313(id_movimiento),
-
-    FOREIGN KEY (id_wod)
-        REFERENCES wod(id_wod),
-    FOREIGN KEY (id_movimiento)
-        REFERENCES movimientos(id_movimiento)
 );
 
 ########################
