@@ -109,7 +109,7 @@ CREATE TABLE IF NOT EXISTS movimientos(
     id_movimiento     INT PRIMARY KEY NOT NULL,
     nombre            VARCHAR(300),
     descripcion       VARCHAR(500),
-    permite_pr        CHAR(1),
+    permite_pr        CHAR(1), #N para no, S para sí
     tipo_ejercicio    VARCHAR(50),
     id_u_medida       INT NOT NULL,
     id_area_mov       INT NOT NULL,
@@ -303,18 +303,30 @@ CREATE TABLE IF NOT EXISTS historial_pr(
 
 /*
 Trigger para validar que solo se inserten valores donde el peso sea mayor al record anterior
+Y que sea un movimiento que permita records personales
 */
 CREATE TRIGGER trg_insert_pr
     BEFORE INSERT ON historial_pr FOR EACH ROW
     BEGIN
-        # Verificar que el peso nuevo es mayor al registrado previamente
-        IF (SELECT pr.peso_pr
-            FROM historial_pr pr
-            WHERE pr.dpi_atleta = NEW.dpi_atleta
-                AND pr.id_especialidad = NEW.id_especialidad
-                AND pr.id_movimiento = NEW.id_movimiento) > NEW.peso_pr
+        # Verificar que se permitan records personales
+        IF (SELECT m.permite_pr
+            FROM movimientos m
+            WHERE m.id_movimiento = NEW.id_movimiento) = 'S'
         THEN
-            SIGNAL SQLSTATE '45003'
-                SET MESSAGE_TEXT = 'Record no insertado porque ya existe uno con mayor peso para este atleta en este movimiento ';
+            # Verificar que el peso nuevo es mayor al registrado previamente
+            IF (SELECT pr.peso_pr
+                FROM historial_pr pr
+                WHERE pr.dpi_atleta = NEW.dpi_atleta
+                    AND pr.id_especialidad = NEW.id_especialidad
+                    AND pr.id_movimiento = NEW.id_movimiento) > NEW.peso_pr
+            THEN
+                SIGNAL SQLSTATE '45003'
+                    SET MESSAGE_TEXT = 'Record no insertado porque ya existe uno con mayor peso para este atleta en este movimiento ';
+            END IF;
+        ELSE
+            SIGNAL SQLSTATE '45004'
+                SET MESSAGE_TEXT = 'Este movimiento no permite records personales';
         END IF;
+
+
     END;
