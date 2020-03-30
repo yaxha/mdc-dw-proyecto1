@@ -1,21 +1,28 @@
+/*
+PROYECTO CROSSFIT
+Curso: Diseño y Construcción de Data Warehouse
+Autores:
+    Lilian Rebeca Carrera Lemus
+    José Armando Barrios León
+*/
 CREATE DATABASE IF NOT EXISTS CROSSFIT;
 USE CROSSFIT;
 
-/*Esta tabla hace referencia a si el ejercicio es del área de gimnasia, levantamientos de peso, 
+/*Esta tabla hace referencia a si el ejercicio es del área de gimnasia, levantamientos de peso,
   acondicionamiento metabólico, etc*/
-CREATE TABLE IF NOT EXISTS area_movimiento (
+CREATE TABLE IF NOT EXISTS area_movimiento(
     id_area_mov    INT  PRIMARY KEY NOT NULL,
     nombre         VARCHAR(100)
 );
 
 /*Las categorías de wod son: normal(wod definido por el box), The Girls, Heros, etc.*/
-CREATE TABLE IF NOT EXISTS categoria_wod (
+CREATE TABLE IF NOT EXISTS categoria_wod(
     id_categoria    INT  PRIMARY KEY NOT NULL,
     nombre          VARCHAR(200),
     descripcion     VARCHAR(300)
 );
 
-CREATE TABLE IF NOT EXISTS warm_up (
+CREATE TABLE IF NOT EXISTS warm_up(
     id_warmup            INT PRIMARY KEY NOT NULL,
     descripcion          VARCHAR(300),
     duracion_muinutos    INT
@@ -29,7 +36,7 @@ CREATE TABLE IF NOT EXISTS especialidad(
     descripcion                 VARCHAR(200)
 );
 
-/*Un wod puede tener diferentes modalidades, las cuales pueden ser: AMRAP, EMOM, For Time, 
+/*Un wod puede tener diferentes modalidades, las cuales pueden ser: AMRAP, EMOM, For Time,
   TABATA, For Max Weigth*/
 CREATE TABLE IF NOT EXISTS modalidad(
     id_modalidad    INT PRIMARY KEY  NOT NULL,
@@ -97,7 +104,7 @@ CREATE TABLE IF NOT EXISTS clase(
         REFERENCES wod(id_wod)
 );
 
-/*Las movimientos de forma individual pueden tener distintas formas de ser medidos, 
+/*Las movimientos de forma individual pueden tener distintas formas de ser medidos,
   ejemplos: altura caja, peso, etc.*/
 CREATE TABLE IF NOT EXISTS unidad_medida(
     id_u_medida    INT  PRIMARY KEY NOT NULL,
@@ -108,9 +115,9 @@ CREATE TABLE IF NOT EXISTS unidad_medida(
 CREATE TABLE IF NOT EXISTS movimientos(
     id_movimiento     INT PRIMARY KEY NOT NULL,
     nombre            VARCHAR(300),
-    nombre_corto      VARCHAR(50),
+	nombre_corto      VARCHAR(50),
     descripcion       VARCHAR(500),
-    permite_pr        CHAR(1), #N para no, S para sí
+    permite_pr        CHAR(1),
     tipo_ejercicio    VARCHAR(50),
     id_u_medida       INT NOT NULL,
     id_area_mov       INT NOT NULL,
@@ -165,7 +172,7 @@ CREATE TABLE IF NOT EXISTS personas(
         REFERENCES tipo_persona(id_tipo_persona)
 );
 
-/*Los horarios del box ya estan definidos y son: 5:00AM, 6:00AM, 7:00AM, 12:00PM, 
+/*Los horarios del box ya estan definidos y son: 5:00AM, 6:00AM, 7:00AM, 12:00PM,
   4:30PM, 5:30PM, 6:30PM, 7:30PM., 8:00AM, 9:30AM y 11:00AM). */
 CREATE TABLE IF NOT EXISTS horario(
     id_horario     INT PRIMARY KEY  NOT NULL,
@@ -196,7 +203,7 @@ CREATE TABLE IF NOT EXISTS sesion(
 );
 
 #########################
-#Esta tabla tendrá un trigger para validar que un entrenador no este asignado como 
+#Esta tabla tendrá un trigger para validar que un entrenador no este asignado como
 # entrenador y como atleta en una misma sesión
 CREATE TABLE IF NOT EXISTS detalle_sesion(
     id_sesion      INT  NOT NULL,
@@ -213,6 +220,44 @@ CREATE TABLE IF NOT EXISTS detalle_sesion(
     FOREIGN KEY (dpi_atleta)
         REFERENCES personas(dpi)
 );
+
+CREATE TABLE IF NOT EXISTS detalle_wod(
+    id_wod           INT  NOT NULL,
+    id_movimiento    INT  NOT NULL,
+    cantidad_reps    INT,
+    PRIMARY KEY (id_wod, id_movimiento),
+
+    INDEX Ref712(id_wod),
+    INDEX Ref313(id_movimiento),
+
+    FOREIGN KEY (id_wod)
+        REFERENCES wod(id_wod),
+    FOREIGN KEY (id_movimiento)
+        REFERENCES movimientos(id_movimiento)
+);
+
+########################
+/*Esta tabla tendrá un trigger para validar si el peso de PR que está ingresando el atleta es mayor
+al máximo existente para un determinado movimiento en esta tabla para ingresarlo,
+  de lo contrario no se podrá ingresar*/
+CREATE TABLE IF NOT EXISTS historial_pr(
+    id_sesion          INT  NOT NULL,
+    dpi_atleta         INT  NOT NULL,
+    id_especialidad    INT  NOT NULL,
+    id_movimiento      INT  NOT NULL,
+    peso_pr            INT,
+    PRIMARY KEY (id_sesion, dpi_atleta, id_especialidad, id_movimiento),
+
+    INDEX Ref1432(id_sesion, dpi_atleta),
+    INDEX Ref1033(id_especialidad, id_movimiento),
+
+    FOREIGN KEY (id_sesion, dpi_atleta)
+        REFERENCES detalle_sesion(id_sesion, dpi_atleta),
+    FOREIGN KEY (id_especialidad, id_movimiento)
+        REFERENCES detalle_especialidad(id_especialidad, id_movimiento)
+);
+
+##############################SECCIÓN DE TRIGGERS ##############################################
 /*
 Trigger que verifica que un atleta no intenta hacer una clase cuando ya tuvo otra ese mismo día.
 También se verificará que el atleta no sea el entrenador de la sesión
@@ -275,41 +320,6 @@ CREATE TRIGGER trg_sesiones_atleta
                 SET MESSAGE_TEXT = 'Este entrenador no pudo ser adherido a la sesión porque ya ha dado 3 sesiones este día.';
         END IF;
     END;
-
-CREATE TABLE IF NOT EXISTS detalle_wod (
-    id_wod           INT  NOT NULL,
-    id_movimiento    INT  NOT NULL,
-    cantidad_reps    INT,
-    PRIMARY KEY (id_wod, id_movimiento),
-
-    INDEX Ref712(id_wod),
-    INDEX Ref313(id_movimiento),
-
-    FOREIGN KEY (id_wod)
-        REFERENCES wod(id_wod),
-    FOREIGN KEY (id_movimiento)
-        REFERENCES movimientos(id_movimiento)
-);
-########################
-/*Esta tabla tendrá un trigger para validar si el peso de PR que está ingresando el atleta es mayor 
-al máximo existente para un determinado movimiento en esta tabla para ingresarlo, 
-  de lo contrario no se podrá ingresar*/
-CREATE TABLE IF NOT EXISTS historial_pr(
-    id_sesion          INT  NOT NULL,
-    dpi_atleta         INT  NOT NULL,
-    id_especialidad    INT  NOT NULL,
-    id_movimiento      INT  NOT NULL,
-    peso_pr            DOUBLE(4,2),
-    PRIMARY KEY (id_sesion, dpi_atleta, id_especialidad, id_movimiento),
-
-    INDEX Ref1432(id_sesion, dpi_atleta),
-    INDEX Ref1033(id_especialidad, id_movimiento),
-
-    FOREIGN KEY (id_sesion, dpi_atleta)
-        REFERENCES detalle_sesion(id_sesion, dpi_atleta),
-    FOREIGN KEY (id_especialidad, id_movimiento)
-        REFERENCES detalle_especialidad(id_especialidad, id_movimiento)
-);
 
 /*
 Trigger para validar que solo se inserten valores donde el peso sea mayor al record anterior
