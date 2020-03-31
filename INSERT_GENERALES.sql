@@ -44,9 +44,12 @@ INSERT INTO tipo_puntuacion(id_tipo_puntuacion, descripcion) VALUES(1, 'Rondas')
 INSERT INTO tipo_puntuacion(id_tipo_puntuacion, descripcion) VALUES(2, 'Tiempo');
 INSERT INTO tipo_puntuacion(id_tipo_puntuacion, descripcion) VALUES(3, 'Repeticiones');
 
-INSERT INTO unidad_medida(id_u_medida, nombre) VALUES(1, 'Cantidad Repeticiones');
-INSERT INTO unidad_medida(id_u_medida, nombre) VALUES(2, 'Altura');
-INSERT INTO unidad_medida(id_u_medida, nombre) VALUES(3, 'Peso');
+INSERT INTO unidad_medida
+    (id_u_medida, nombre)
+VALUES (1, 'Cantidad Repeticiones'),
+       (2, 'Altura'),
+       (3, 'Peso'),
+       (4, 'Distancia');
 
 INSERT INTO tipo_persona(id_tipo_persona, nombre_tipo) VALUES(1, 'Atleta');
 INSERT INTO tipo_persona(id_tipo_persona, nombre_tipo) VALUES(2, 'Entrenador');
@@ -65,68 +68,152 @@ INSERT INTO horario(id_horario, hora_inicio, hora_fin) VALUES(10,'9:30AM','11:00
 ###########################################################################################
 #TABLAS DEPENDIENTES
 
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(1,'Box Jump', 'BJ','Salto al cajón','N','Base',2,1);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(2,'Bench Press', 'BP','Press de banca','S','Base',3,3);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(3,'Back Squat', 'BS','Sentadilla trasera con peso','S','Base',3,3);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(4,'Burpee', 'BRP','Burpee','N','Base',1,1);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(5,'Clean and Jerk', 'C&J','Cargada y envión','S','Base',3,3);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(6,'Clean', 'CLN','Cargada','S','Base',3,3);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(7,'Hang Clean', 'HC','Cargada colgante','S','Variación',3,3);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(8,'Power Clean', 'PC','Cargada colgante de potencia','S','Variación',3,3);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(9,'Squat Clean', 'SC','Levantando peso desde el piso y hacer un squat a la vez','S','Variación',3,3);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(10,'Chest to Bar', 'CTB','Pecho a la barra','N','Base',1,2);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(11,'Dead lift', 'DL','Dead lift: Peso Muerto','S','Base',3,3);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(12,'Double Unders', 'DU','Dos vueltas de la cuerda en un salto','N','Base',1,1);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(13,'Front Squat', 'FS','Sentadilla frontal con peso','S','Base',3,3);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(14,'Hand Stand Push-Up', 'HSPU','Pino flexión ó Parada de manos con flexión','N','Base',1,2);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(15,'Knees to Elbows', 'K2E','Rodillas a los codos (en la barra)','N','Base',1,2);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(16,'Muscle Up', 'MU','Movimientos combinados que encadenan un balanceo con un fondo de brazos (puede ser en anillas o en barras).','N','Base',1,2);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(17,'Overhead squat', 'OHS','Sentadilla con peso por encima de la cabeza','S','Base',3,3);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(18,'Push Jerk', 'PJ','Empuje con envión','S','Base',3,3);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(19,'Push Press', 'PP','Empuje con fuerza','S','Base',3,3);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(20,'Pull Up or Push Up', 'PU','Dominadas o flexiones','N','Base',1,1);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(21,'Sumo Dead lift High Pull', 'SDHP','Peso muerto en posición de sumo, empujando la barra hasta la altura de la barbilla.','S','Base',3,3);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(22,'Split Jerk', 'SJ','Empuje con tirón o empuje con envión','S','Base',3,3);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(23,'Snatch', 'SN','Arranque','S','Base',3,3);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(24,'Power Snatch', 'PS','Arranque con potencia','S','Variación',3,3);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(25,'Squat Snatch', 'SS','Arranque con sentadilla','S','Variación',3,3);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(26,'Hang Snatch', 'HS','Arranque colgante con sentadilla','S','Variación',3,3);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(27,'Shoulder Press', 'SP','Press de hombros ','S','Base',3,3);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(28,'Squat', 'SQ','Sentadilla','N','Base',1,1);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(29,'Toes to Bar', 'TtB','Pies a la barra','N','Base',1,2);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(30,'Unbroken', 'UB','Es cuando se realiza un ejercicio de principio a fin sin descanso','N','Base',1,1);
-INSERT INTO movimientos(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
-VALUES(31,'Wall Balls', 'WB','Lanzamiento de bola a la pared','N','Base',1,1);
+INSERT INTO movimientos
+	(id_movimiento, nombre, nombre_corto, descripcion, permite_pr, tipo_ejercicio, id_u_medida, id_area_mov)
+VALUES
+(1,'Box Jump', 'BJ','Salto al cajón','N','Base',2,1),
+(2,'Bench Press', 'BP','Press de banca','S','Base',3,3),
+(3,'Back Squat', 'BS','Sentadilla trasera con peso','S','Base',3,3),
+(4,'Burpee', 'BRP','Burpee','N','Base',1,1),
+(5,'Clean and Jerk', 'C&J','Cargada y envión','S','Base',3,3),
+(6,'Clean', 'CLN','Cargada','S','Base',3,3),
+(7,'Hang Clean', 'HC','Cargada colgante','S','Variación',3,3),
+(8,'Power Clean', 'PC','Cargada colgante de potencia','S','Variación',3,3),
+(9,'Squat Clean', 'SC','Levantando peso desde el piso y hacer un squat a la vez','S','Variación',3,3),
+(10,'Chest to Bar', 'CTB','Pecho a la barra','N','Base',1,2),
+(11,'Dead lift', 'DL','Dead lift: Peso Muerto','S','Base',3,3),
+(12,'Double Unders', 'DU','Dos vueltas de la cuerda en un salto','N','Base',1,1),
+(13,'Front Squat', 'FS','Sentadilla frontal con peso','S','Base',3,3),
+(14,'Hand Stand Push-Up', 'HSPU','Pino flexión ó Parada de manos con flexión','N','Base',1,2),
+(15,'Knees to Elbows', 'K2E','Rodillas a los codos (en la barra)','N','Base',1,2),
+(16,'Muscle Up', 'MU','Movimientos combinados que encadenan un balanceo con un fondo de brazos (puede ser en anillas o en barras).','N','Base',1,2),
+(17,'Overhead squat', 'OHS','Sentadilla con peso por encima de la cabeza','S','Base',3,3),
+(18,'Push Jerk', 'PJ','Empuje con envión','S','Base',3,3),
+(19,'Push Press', 'PP','Empuje con fuerza','S','Base',3,3),
+(20,'Pull Up', 'PUL','Dominadas','N','Base',1,1),
+(21,'Sumo Dead lift High Pull', 'SDHP','Peso muerto en posición de sumo, empujando la barra hasta la altura de la barbilla.','S','Base',3,3),
+(22,'Split Jerk', 'SJ','Empuje con tirón o empuje con envión','S','Base',3,3),
+(23,'Snatch', 'SN','Arranque','S','Base',3,3),
+(24,'Power Snatch', 'PS','Arranque con potencia','S','Variación',3,3),
+(25,'Squat Snatch', 'SS','Arranque con sentadilla','S','Variación',3,3),
+(26,'Hang Snatch', 'HS','Arranque colgante con sentadilla','S','Variación',3,3),
+(27,'Shoulder Press', 'SP','Press de hombros ','S','Base',3,3),
+(28,'Squat', 'SQ','Sentadilla','N','Base',1,1),
+(29,'Toes to Bar', 'TtB','Pies a la barra','N','Base',1,2),
+(30,'Unbroken', 'UB','Es cuando se realiza un ejercicio de principio a fin sin descanso','N','Base',1,1),
+(31,'Wall Balls', 'WB','Lanzamiento de bola a la pared','N','Base',1,1),
+(32,'Push Up', 'PUS', 'Flexiones', 'N', 'Base', 1, 1),
+(33,'Sit Up', 'SU', 'Abdominales', 'N', 'Base', 1, 1),
+(34,'Thrusters', 'TH', 'Levantamiento de pesa desde el pecho', 'S', 'Base', 3, 3),
+(35,'Single-leg Squat', 'SLSQ','Sentadilla con una sola pierna','N','Variación',1,1),
+(36,'Run', 'RN', 'Spint/Correr', 'N', 'Base', 4, 1),
+(37,'Kettlebell Swing', 'KS', 'Balanceo de Kettlebell', 'S', 'Base', 1, 2);
+
+##############################################################################################################################
+
+INSERT INTO wod
+    (id_wod, nombre, duracion_minutos, rx_masculino, rx_feminino, puntuacion_meta, descanso, descripcion, id_modalidad, id_categoria, id_tipo_puntuacion)
+VALUES
+    (1, 'Barbara', 15, NULL, NULL, 5, 'Descansos de 1 minuto por ronda', '5 rounds, 3 minutos, descanso', 1, 3, 1),
+    (2, 'Chelsea', 30, NULL, NULL, 30, NULL, 'EMOM por 30 minutos', 2, 3, 2),
+    (3, 'Mary', 20, NULL, NULL, 20, NULL, 'AMRAP en 20 minutos', 1, 3, 2),
+    (4, 'Cindy', 20, NULL, NULL, 20, NULL, 'AMRAP en 20 minutos', 1, 3, 2),
+    (5, 'Annie', NULL, NULL, NULL, 300, NULL, '50-40-30-20-10', 4, 3, 3 ),
+    (6, 'Nicole', 20, NULL, NULL, 20, NULL, 'AMRAP en 20 minutos', 1, 3, 2),
+    (7, 'Angie', NULL, NULL, NULL, 20, NULL, NULL, 6, 3, 2),
+    (8, 'Eva', NULL, 70, 50, 5, NULL, '5 rondas', 1, 3, 1),
+    (9, 'Helen', NULL, 55, 35, 3, NULL, '3 rondas', 6, 3, 1),
+    (10, 'Kelly', NULL, 20, 14, 5, NULL, '5 rondas', 6, 3, 1),
+    (11, 'Karen', NULL, 20, 14, 15, NULL, 'AFAP', 6, 3, 2),
+    (12, 'Amanda', NULL, 135, 95, 12, NULL, 'AFAP', 6, 3, 2),
+    (13, 'Jackie', NULL, 45, 35, 10, NULL, 'AFAP', 6, 3, 2),
+    (14, 'Diane', NULL, 225, 155, 10, 'Descansos cortos de 3 a 10 segundos entre rondas', '21-15-9', 3, 3, 2),
+    (15, 'Fran', NULL, 95, 65, 7, NULL, '21-15-9', 3, 3, 2),
+    (16, 'Elizabeth', NULL, 135, 95, 10, 'Se permiten descansos de varios segundos', '21-15-9', 3, 3, 2),
+    (17, 'Nancy', NULL, 95, 65, 5, NULL, '5 rondas', 3, 3, 1),
+    (18, 'Lynne', NULL, NULL, NULL, 5, 'Tanto tiempo como sea necesario entre rondas', '5 rondas de repeticiones al máximo', 1, 3, 1),
+    (19, 'Isabel', NULL, 135, 95, 6, NULL, 'AFAP', 6, 3, 2),
+    (20, 'Linda', NULL, NULL, NULL, 25, NULL, '10-9-8-7-6-5-4-3-2-1', 3, 3, 2),
+    (21, 'Grace', NULL, 135, 95, 5, 'Muy poco o nulo descanso entre repeticiones', 'AFAP', 6, 3, 2);
+
+
+###############################################################################################################################
+
+INSERT INTO detalle_wod
+    (id_wod, id_movimiento, cantidad_reps)
+VALUES
+    #Barbara
+    (1, 20, 20),
+    (1, 32, 30),
+    (1, 33, 40),
+    (1, 28, 50),
+    #Chelsea
+    (2, 20, 5),
+    (2, 32, 10),
+    (2, 28, 15),
+    #Mary
+    (3, 14, 5),
+    (3, 35, 10),
+    (3, 20, 15),
+    #Cindy
+    (4, 20, 5),
+    (4, 32, 10),
+    (4, 28, 15),
+    #Annie
+    (5, 12, NULL),
+    (5, 33, NULL),
+    #Nicole
+    (6, 36, 400),
+    (6, 20, NULL),
+    #Angie
+    (7, 20, 100),
+    (7, 32, 100),
+    (7, 33, 100),
+    (7, 28, 100),
+    #Eva
+    (8, 36, 800),
+    (8, 37, 30),
+    (8, 20, 30),
+    #Helen
+    (9, 36, 400),
+    (9, 37, 21),
+    (9, 20, 12),
+    #Kelly
+    (10, 36, 400),
+    (10, 1, 30),
+    (10, 31, 30),
+    #Karen
+    (11, 31, 150),
+    #Amanda
+    (12, 16, NULL),
+    (12, 23, NULL),
+    #Jackie
+    (13, 36, 1000),
+    (13, 34, 50),
+    (13, 20, 30),
+    #Diane
+    (14, 11, NULL),
+    (14, 14, NULL),
+    #Fran
+    (15, 34, NULL),
+    (15, 20, NULL),
+    #Elizabeth
+    (16, 6, NULL),
+    (16, 16, NULL),
+    #Nancy
+    (17, 36, 400),
+    (17, 17, 15),
+    #Lynne
+    (18, 2, NULL),
+    (18, 20, NULL),
+    #Isabel
+    (19, 23, 30),
+    #Linda
+    (20, 11, NULL),
+    (20, 2, NULL),
+    (20, 6, NULL),
+    #Grace
+    (21, 5, 30);
 
 ################################################################################################################################
 
