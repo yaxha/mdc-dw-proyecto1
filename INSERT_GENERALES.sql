@@ -28,7 +28,7 @@ INSERT INTO especialidad(id_especialidad, nombre_area_especialidad, duracion_mun
 VALUES(4,'Complex',15,'Ejercicios varios que involucran únicamente barras, durante un complexno puede soltarse la barra.');
 
 INSERT INTO modalidad(id_modalidad, nombre, descripcion)
-VALUES (1, 'AMRAP', 'As Meny Rounds As Possible.Rondas de un grupo de ejercicios que se puedan completar durante un tiempo establecido');
+VALUES (1, 'AMRAP', 'As Many Rounds As Possible.Rondas de un grupo de ejercicios que se puedan completar durante un tiempo establecido');
 INSERT INTO modalidad(id_modalidad, nombre, descripcion)
 VALUES (2, 'EMOM', 'Every Minute On the Minute. Variaciones de ejercicios cada minuto durante un minuto');
 INSERT INTO modalidad(id_modalidad, nombre, descripcion)
@@ -54,16 +54,20 @@ VALUES (1, 'Cantidad Repeticiones'),
 INSERT INTO tipo_persona(id_tipo_persona, nombre_tipo) VALUES(1, 'Atleta');
 INSERT INTO tipo_persona(id_tipo_persona, nombre_tipo) VALUES(2, 'Entrenador');
 
-INSERT INTO horario(id_horario, hora_inicio, hora_fin) VALUES(1,'5:00AM','6:00AM');
-INSERT INTO horario(id_horario, hora_inicio, hora_fin) VALUES(2,'6:00AM','7:00AM');
-INSERT INTO horario(id_horario, hora_inicio, hora_fin) VALUES(3,'7:00AM','8:00AM');
-INSERT INTO horario(id_horario, hora_inicio, hora_fin) VALUES(4,'12:00PM','1:00PM');
-INSERT INTO horario(id_horario, hora_inicio, hora_fin) VALUES(5,'4:30PM','5:30PM');
-INSERT INTO horario(id_horario, hora_inicio, hora_fin) VALUES(6,'5:30PM','6:30PM');
-INSERT INTO horario(id_horario, hora_inicio, hora_fin) VALUES(7,'6:30PM','7:30PM');
-INSERT INTO horario(id_horario, hora_inicio, hora_fin) VALUES(8,'5:00AM','6:00AM');
-INSERT INTO horario(id_horario, hora_inicio, hora_fin) VALUES(9,'8:00AM','9:30AM');
-INSERT INTO horario(id_horario, hora_inicio, hora_fin) VALUES(10,'9:30AM','11:00AM');
+INSERT INTO horario
+    (id_horario, hora_inicio, hora_fin)
+VALUES
+       (1,'5:00AM','6:00AM'), #Lunes a viernes
+       (2,'6:00AM','7:00AM'), #Lunes a viernes
+       (3,'7:00AM','8:00AM'), #Lunes a viernes
+       (4,'12:00PM','1:00PM'),#Lunes a viernes
+       (5,'4:30PM','5:30PM'), #Lunes a viernes
+       (6,'5:30PM','6:30PM'), #Lunes a viernes
+       (7,'6:30PM','7:30PM'), #Lunes a viernes
+       (8,'7:30PM','8:30PM'), #Lunes a viernes
+       (9,'8:00AM','9:00AM'), #Sábado
+       (10,'9:30AM','10:30AM'), #Sábado
+       (11,'11:00AM','12:00PM'); #Sábado
 
 ###########################################################################################
 #TABLAS DEPENDIENTES

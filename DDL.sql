@@ -8,33 +8,6 @@ Autores:
 CREATE DATABASE IF NOT EXISTS CROSSFIT;
 USE CROSSFIT;
 
-/*Las movimientos de forma individual pueden tener distintas formas de ser medidos,
-  ejemplos: altura caja, peso, etc.*/
-CREATE TABLE IF NOT EXISTS unidad_medida(
-    id_u_medida    INT  PRIMARY KEY NOT NULL,
-    nombre         VARCHAR(200)
-);
-
-
-CREATE TABLE IF NOT EXISTS movimientos(
-    id_movimiento     INT PRIMARY KEY NOT NULL,
-    nombre            VARCHAR(300),
-	nombre_corto      VARCHAR(50),
-    descripcion       VARCHAR(500),
-    permite_pr        CHAR(1),
-    tipo_ejercicio    VARCHAR(50),
-    id_u_medida       INT NOT NULL,
-    id_area_mov       INT NOT NULL,
-
-    INDEX Ref24(id_u_medida),
-    INDEX Ref175(id_area_mov),
-
-    FOREIGN KEY (id_u_medida)
-        REFERENCES unidad_medida(id_u_medida),
-    FOREIGN KEY (id_area_mov)
-        REFERENCES area_movimiento(id_area_mov)
-);
-
 /*Esta tabla hace referencia a si el ejercicio es del área de gimnasia, levantamientos de peso,
   acondicionamiento metabólico, etc*/
 CREATE TABLE IF NOT EXISTS area_movimiento(
@@ -61,21 +34,6 @@ CREATE TABLE IF NOT EXISTS especialidad(
     nombre_area_especialidad    VARCHAR(100),
     duracion_munutos            INT,
     descripcion                 VARCHAR(200)
-);
-
-CREATE TABLE IF NOT EXISTS detalle_especialidad(
-    id_especialidad    INT  NOT NULL,
-    id_movimiento      INT  NOT NULL,
-    cantidad_reps      INT  NOT NULL,
-    PRIMARY KEY (id_especialidad, id_movimiento),
-
-    INDEX Ref910(id_especialidad),
-    INDEX Ref311(id_movimiento),
-
-    FOREIGN KEY (id_especialidad)
-        REFERENCES especialidad(id_especialidad),
-    FOREIGN KEY (id_movimiento)
-        REFERENCES movimientos(id_movimiento)
 );
 
 /*Un wod puede tener diferentes modalidades, las cuales pueden ser: AMRAP, EMOM, For Time,
@@ -117,20 +75,6 @@ CREATE TABLE IF NOT EXISTS wod(
         REFERENCES tipo_puntuacion(id_tipo_puntuacion)
 );
 
-CREATE TABLE IF NOT EXISTS detalle_wod(
-    id_wod           INT  NOT NULL,
-    id_movimiento    INT  NOT NULL,
-    cantidad_reps    INT,
-    PRIMARY KEY (id_wod, id_movimiento),
-
-    INDEX Ref712(id_wod),
-    INDEX Ref313(id_movimiento),
-
-    FOREIGN KEY (id_wod)
-        REFERENCES wod(id_wod),
-    FOREIGN KEY (id_movimiento)
-        REFERENCES movimientos(id_movimiento)
-);
 
 CREATE TABLE IF NOT EXISTS clase(
     id_clase           INT PRIMARY KEY NOT NULL,
@@ -149,6 +93,48 @@ CREATE TABLE IF NOT EXISTS clase(
         REFERENCES especialidad(id_especialidad),
     FOREIGN KEY (id_wod)
         REFERENCES wod(id_wod)
+);
+
+/*Las movimientos de forma individual pueden tener distintas formas de ser medidos,
+  ejemplos: altura caja, peso, etc.*/
+CREATE TABLE IF NOT EXISTS unidad_medida(
+    id_u_medida    INT  PRIMARY KEY NOT NULL,
+    nombre         VARCHAR(200)
+);
+
+
+CREATE TABLE IF NOT EXISTS movimientos(
+    id_movimiento     INT PRIMARY KEY NOT NULL,
+    nombre            VARCHAR(300),
+	nombre_corto      VARCHAR(50),
+    descripcion       VARCHAR(500),
+    permite_pr        CHAR(1),
+    tipo_ejercicio    VARCHAR(50),
+    id_u_medida       INT NOT NULL,
+    id_area_mov       INT NOT NULL,
+
+    INDEX Ref24(id_u_medida),
+    INDEX Ref175(id_area_mov),
+
+    FOREIGN KEY (id_u_medida)
+        REFERENCES unidad_medida(id_u_medida),
+    FOREIGN KEY (id_area_mov)
+        REFERENCES area_movimiento(id_area_mov)
+);
+
+CREATE TABLE IF NOT EXISTS detalle_especialidad(
+    id_especialidad    INT  NOT NULL,
+    id_movimiento      INT  NOT NULL,
+    cantidad_reps      INT  NOT NULL,
+    PRIMARY KEY (id_especialidad, id_movimiento),
+
+    INDEX Ref910(id_especialidad),
+    INDEX Ref311(id_movimiento),
+
+    FOREIGN KEY (id_especialidad)
+        REFERENCES especialidad(id_especialidad),
+    FOREIGN KEY (id_movimiento)
+        REFERENCES movimientos(id_movimiento)
 );
 
 /*Una persona puede ser Atleta o Entrenador*/
@@ -227,6 +213,21 @@ CREATE TABLE IF NOT EXISTS detalle_sesion(
         REFERENCES personas(dpi)
 );
 
+CREATE TABLE IF NOT EXISTS detalle_wod(
+    id_wod           INT  NOT NULL,
+    id_movimiento    INT  NOT NULL,
+    cantidad_reps    INT,
+    PRIMARY KEY (id_wod, id_movimiento),
+
+    INDEX Ref712(id_wod),
+    INDEX Ref313(id_movimiento),
+
+    FOREIGN KEY (id_wod)
+        REFERENCES wod(id_wod),
+    FOREIGN KEY (id_movimiento)
+        REFERENCES movimientos(id_movimiento)
+);
+
 ########################
 /*Esta tabla tendrá un trigger para validar si el peso de PR que está ingresando el atleta es mayor
 al máximo existente para un determinado movimiento en esta tabla para ingresarlo,
@@ -295,20 +296,39 @@ CREATE TRIGGER trg_sesion_atleta
     END;
 
 /*
-Trigger para verificar que un entrenador no imparta más de 3 sesiones por día
+Trigger para verificar que un entrenador no imparta más de 3 sesiones por día y que sea un horario permitido
 */
-CREATE TRIGGER trg_sesiones_atleta
+CREATE TRIGGER trg_insert_sesion
     BEFORE INSERT ON sesion FOR EACH ROW
     BEGIN
-        # Verificar las sesiones con esta fecha y donde haya participado este entrenador
-        IF (SELECT COUNT(1)
-            FROM sesion S
-            WHERE S.fecha = NEW.fecha
-                AND S.dpi_entrenador = NEW.dpi_entrenador
-            GROUP BY S.fecha, S.dpi_entrenador) > 3
+        DECLARE dia_semana INT;
+
+        SELECT DAYOFWEEK(NEW.fecha) INTO dia_semana;
+
+        # Verificar que el día de la semana sea de lunes (2) a sábado (7)
+        IF(SELECT dia_semana BETWEEN 2 AND 7)
         THEN
-            SIGNAL SQLSTATE '45002'
-                SET MESSAGE_TEXT = 'Este entrenador no pudo ser adherido a la sesión porque ya ha dado 3 sesiones este día.';
+            # Verificar horario adecuado para cada día de la semana
+            IF(((SELECT dia_semana BETWEEN 2 AND 6) AND (SELECT NEW.id_horario BETWEEN 1 AND 8)) #Lunes a viernes
+                OR ((SELECT dia_semana = 7) AND (SELECT NEW.id_horario BETWEEN 9 AND 11))) #Sábado
+            THEN
+                # Verificar las sesiones con esta fecha y donde haya participado este entrenador
+                IF (SELECT COUNT(1)
+                    FROM sesion S
+                    WHERE S.fecha = NEW.fecha
+                        AND S.dpi_entrenador = NEW.dpi_entrenador
+                    GROUP BY S.fecha, S.dpi_entrenador) > 3
+                THEN
+                    SIGNAL SQLSTATE '45002'
+                        SET MESSAGE_TEXT = 'Este entrenador no pudo ser adherido a la sesión porque ya ha dado 3 sesiones este día.';
+                END IF;
+            ELSE
+                SIGNAL SQLSTATE '45007'
+                    SET MESSAGE_TEXT = 'Se está intentando insertar un horario no permitido para este día.';
+            END IF;
+        ELSE
+            SIGNAL SQLSTATE '45006'
+                SET MESSAGE_TEXT = 'Sólo se permite ingresar sesiones de lunes a sábado.';
         END IF;
     END;
 
