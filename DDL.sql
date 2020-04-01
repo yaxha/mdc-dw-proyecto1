@@ -1,4 +1,4 @@
-/*
+ /*
 PROYECTO CROSSFIT
 Curso: Diseño y Construcción de Data Warehouse
 Autores:
@@ -145,7 +145,7 @@ CREATE TABLE IF NOT EXISTS tipo_persona(
 
 
 CREATE TABLE IF NOT EXISTS personas(
-    dpi                INT PRIMARY KEY  NOT NULL,
+    dpi                NUMERIC(20) PRIMARY KEY  NOT NULL,
     nombres            VARCHAR(200)   NOT NULL,
     apellidos          VARCHAR(200)   NOT NULL,
     fec_nacimiento     DATE,
@@ -178,7 +178,7 @@ CREATE TABLE IF NOT EXISTS sesion(
     id_sesion     INT  PRIMARY KEY  NOT NULL,
     fecha         DATE  NOT NULL,
     id_clase      INT   NOT NULL,
-    dpi_entrenador  INT   NOT NULL,
+    dpi_entrenador  NUMERIC(20)   NOT NULL,
     id_horario    INT   NOT NULL,
 
     INDEX Ref1223(id_clase),
@@ -198,7 +198,7 @@ CREATE TABLE IF NOT EXISTS sesion(
 # entrenador y como atleta en una misma sesión
 CREATE TABLE IF NOT EXISTS detalle_sesion(
     id_sesion      INT  NOT NULL,
-    dpi_atleta     INT  NOT NULL,
+    dpi_atleta     NUMERIC(20)  NOT NULL,
     record_wod     VARCHAR(10),
     rx_plus        INT,
     puntuacion_wod    DECIMAL(4, 2),
@@ -234,7 +234,7 @@ al máximo existente para un determinado movimiento en esta tabla para ingresarl
   de lo contrario no se podrá ingresar*/
 CREATE TABLE IF NOT EXISTS historial_pr(
     id_sesion          INT  NOT NULL,
-    dpi_atleta         INT  NOT NULL,
+    dpi_atleta         NUMERIC(20)  NOT NULL,
     id_especialidad    INT  NOT NULL,
     id_movimiento      INT  NOT NULL,
     peso_pr            INT,
@@ -360,3 +360,5 @@ CREATE TRIGGER trg_insert_pr
                 SET MESSAGE_TEXT = 'Este movimiento no permite records personales.';
         END IF;
     END;
+
+COMMIT;
