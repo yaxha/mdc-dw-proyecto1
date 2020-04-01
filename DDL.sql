@@ -200,8 +200,8 @@ CREATE TABLE IF NOT EXISTS detalle_sesion(
     id_sesion      INT  NOT NULL,
     dpi_atleta     NUMERIC(20)  NOT NULL,
     record_wod     VARCHAR(10),
-    rx_plus        INT,
-    puntuacion_wod    DECIMAL(4, 2),
+    peso        INT,
+    puntuacion_wod    DECIMAL(10, 2),
     PRIMARY KEY (id_sesion, dpi_atleta),
 
     INDEX Ref1328(id_sesion),
