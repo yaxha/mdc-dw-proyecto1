@@ -110,11 +110,12 @@ VALUES
 (33,'Sit Up', 'SU', 'Abdominales', 'N', 'Base', 1, 1),
 (34,'Thrusters', 'TH', 'Levantamiento de pesa desde el pecho', 'S', 'Base', 3, 3),
 (35,'Single-leg Squat', 'SLSQ','Sentadilla con una sola pierna','N','Variación',1,1),
-(36,'Run', 'RN', 'Spint/Correr', 'N', 'Base', 4, 1),
+(36,'Run', 'RN', 'Sprint/Correr', 'N', 'Base', 4, 1),
 (37,'Kettlebell Swing', 'KS', 'Balanceo de Kettlebell', 'S', 'Base', 1, 2);
 
 ##############################################################################################################################
 
+#The Girls
 INSERT INTO wod
     (id_wod, nombre, duracion_minutos, rx_masculino, rx_feminino, puntuacion_meta, descanso, descripcion, id_modalidad, id_categoria, id_tipo_puntuacion)
 VALUES
@@ -139,6 +140,32 @@ VALUES
     (19, 'Isabel', NULL, 135, 95, 6, NULL, 'AFAP', 6, 3, 2),
     (20, 'Linda', NULL, NULL, NULL, 25, NULL, '10-9-8-7-6-5-4-3-2-1', 3, 3, 2),
     (21, 'Grace', NULL, 135, 95, 5, 'Muy poco o nulo descanso entre repeticiones', 'AFAP', 6, 3, 2);
+
+#Propios del gimnasio
+INSERT INTO wod 
+	(id_wod, nombre, duracion_minutos, rx_masculino, rx_feminino, puntuacion_meta, descanso, descripcion, id_modalidad, id_categoria, id_tipo_puntuacion) 
+VALUES 
+    (22, 'Horst', 21, 225, 69, 6, 'Canis dingo', 'Adaptive solution-oriented time-frame', 5, 1, 3),
+    (23, 'Kristin', 24, 26, 146, 19, 'Coluber constrictor', 'Public-key grid-enabled hierarchy', 1, 1, 3),
+    (24, 'Winnah', 19, 30, 61, 16, 'Phoenicopterus ruber', 'Decentralized web-enabled framework', 6, 1, 3),
+    (25, 'Marlena', 20, 51, 123, 9, 'Gyps bengalensis', 'Self-enabling intermediate initiative', 4, 1, 4),
+    (26, 'Haroun', 15, 27, 152, 20, 'Cercopithecus aethiops', 'Pre-emptive mission-critical Graphic Interface', 6, 1, 2),
+    (27, 'Lauraine', 21, 129, 136, 7, 'Oreotragus oreotragus', 'Face to face upward-trending structure', 6, 1, 2),
+    (28, 'Yank', 24, 214, 54, 19, 'Streptopelia decipiens', 'Focused heuristic projection', 1, 1, 4),
+    (29, 'Stepha', 15, 219, 40, 16, 'Anastomus oscitans', 'Optional cohesive Graphical User Interface', 2, 1, 1),
+    (30, 'Marcos', 19, 134, 61, 15, 'Castor canadensis', 'Synergized national secured line', 5, 1, 3),
+    (31, 'Nevsa', 30, 84, 52, 10, 'Otocyon megalotis', 'Sharable directional groupware', 6, 1, 3),
+    (32, 'Nathalia', 30, 190, 134, 12, 'Laniarius ferrugineus', 'Realigned user-facing database', 4, 1, 4),
+    (33, 'Gwenneth', 24, 71, 63, 12, 'Dasypus novemcinctus', 'Decentralized attitude-oriented extranet', 4, 1, 4),
+    (34, 'Mathew', 15, 78, 121, 16, 'Naja sp.', 'Quality-focused mobile utilisation', 6, 1, 2),
+    (35, 'Talyah', 26, 59, 115, 10, 'Parus atricapillus', 'Persevering zero defect secured line', 3, 1, 4),
+    (36, 'Elvina', 26, 130, 33, 20, 'Laniaurius atrococcineus', 'Upgradable non-volatile support', 2, 1, 1),
+    (37, 'Lisle', 27, 103, 150, 14, 'Acanthaster planci', 'Automated bottom-line capacity', 5, 1, 2),
+    (38, 'Rogerio', 15, 150, 127, 18, 'Branta canadensis', 'Stand-alone heuristic hierarchy', 6, 1, 3),
+    (39, 'Nedi', 22, 182, 98, 18, 'Columba palumbus', 'Robust asynchronous superstructure', 6, 1, 1),
+    (40, 'Janet', 30, 157, 57, 12, 'Felis pardalis', 'Persevering tertiary installation', 3, 1, 1),
+    (41, 'Denys', 17, 65, 39, 17, 'Acridotheres tristis', 'Reverse-engineered optimizing artificial intelligence', 4, 1, 4),
+    (42, 'Cirilo', 18, 92, 154, 18, 'Choloepus hoffmani', 'Triple-buffered local leverage', 5, 1, 4);
 
 
 ###############################################################################################################################
@@ -325,7 +352,3 @@ insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefo
 
 
 COMMIT;
-
-
-
-
