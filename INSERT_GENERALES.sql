@@ -147,15 +147,15 @@ INSERT INTO wod
 VALUES 
     (22, 'Horst', 21, 225, 69, 6, 'Canis dingo', 'Adaptive solution-oriented time-frame', 5, 1, 3),
     (23, 'Kristin', 24, 26, 146, 19, 'Coluber constrictor', 'Public-key grid-enabled hierarchy', 1, 1, 3),
-    (24, 'Winnah', 19, 30, 61, 16, 'Phoenicopterus ruber', 'Decentralized web-enabled framework', 6, 1, 3),
+    (24, 'Winnah', 19, 30, 61, 175, 'Phoenicopterus ruber', 'Decentralized web-enabled framework', 6, 1, 3),
     (25, 'Marlena', 20, 51, 123, 9, 'Gyps bengalensis', 'Self-enabling intermediate initiative', 4, 1, 1),
     (26, 'Haroun', 15, 27, 152, 20, 'Cercopithecus aethiops', 'Pre-emptive mission-critical Graphic Interface', 6, 1, 2),
     (27, 'Lauraine', 21, 129, 136, 7, 'Oreotragus oreotragus', 'Face to face upward-trending structure', 6, 1, 2),
     (28, 'Yank', 24, 214, 54, 19, 'Streptopelia decipiens', 'Focused heuristic projection', 1, 1, 2),
     (29, 'Stepha', 15, 219, 40, 16, 'Anastomus oscitans', 'Optional cohesive Graphical User Interface', 2, 1, 1),
-    (30, 'Marcos', 19, 134, 61, 15, 'Castor canadensis', 'Synergized national secured line', 5, 1, 3),
-    (31, 'Nevsa', 30, 84, 52, 10, 'Otocyon megalotis', 'Sharable directional groupware', 6, 1, 3),
-    (32, 'Nathalia', 30, 190, 134, 12, 'Laniarius ferrugineus', 'Realigned user-facing database', 4, 1, 3),
+    (30, 'Marcos', 19, 134, 61, 100, 'Castor canadensis', 'Synergized national secured line', 5, 1, 3),
+    (31, 'Nevsa', 30, 84, 52, 120, 'Otocyon megalotis', 'Sharable directional groupware', 6, 1, 3),
+    (32, 'Nathalia', 30, 190, 134, 150, 'Laniarius ferrugineus', 'Realigned user-facing database', 4, 1, 3),
     (33, 'Gwenneth', 24, 71, 63, 12, 'Dasypus novemcinctus', 'Decentralized attitude-oriented extranet', 4, 1, 1),
     (34, 'Mathew', 15, 78, 121, 16, 'Naja sp.', 'Quality-focused mobile utilisation', 6, 1, 2),
     (35, 'Talyah', 26, 59, 115, 10, 'Parus atricapillus', 'Persevering zero defect secured line', 3, 1, 2),
@@ -310,7 +310,7 @@ insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefo
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('8542089321103', 'Susanne', 'Fitzer', '1986/11/27', '4 Ridgeview Court', '88192597', 'sfitzerb@facebook.com', 'F', 125, 1, 2);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9457378362113', 'Rowan', 'Capaldo', '1992/07/11', '651 Grayhawk Crossing', '99350405', 'rcapaldoc@xing.com', 'M', 165, 1, 2);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('8767631282023', 'Karlik', 'Cooksley', '1991/07/30', '9628 Packers Plaza', '99261954', 'kcooksleyd@goodreads.com', 'M', 172, 1, 2);
-insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('3669658330202', 'Tiffani', 'Hefferan', '1978/10/28', '2 Hansons Junction', '67299255', 'thefferan0@dailymail.co.uk', 'F', 171, 0, 1);
+insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('3669658330202', 'Tiffani', 'Hefferan', '1978/10/28', '2 Hansons Junction', '67299255', 'thefferan0@dailymail.co.uk', 'F', 171, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('8452434922102', 'Dela', 'Doone', '1993/11/24', '079 Duke Park', '98465021', 'ddoone1@usnews.com', 'F', 124, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9570004530123', 'Merrick', 'Jimeno', '1979/12/16', '1 Toban Crossing', '96512296', 'mjimeno2@soup.io', 'M', 143, 0, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9044711110212', 'Zed', 'Flack', '1982/01/07', '8 Green Junction', '87150706', 'zflack3@csmonitor.com', 'M', 146, 1, 1);
@@ -320,44 +320,44 @@ insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefo
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('7266934750223', 'Kath', 'Sawl', '1990/03/29', '82 Monica Street', '88411174', 'ksawl7@sun.com', 'F', 107, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9132262182123', 'Calla', 'Caller', '1976/10/01', '3 Fremont Circle', '69804419', 'ccaller8@sun.com', 'F', 126, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9526938480113', 'Nolie', 'Adolfson', '1997/07/20', '35 Marcy Parkway', '98508423', 'nadolfson9@meetup.com', 'F', 203, 0, 1);
-insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('8115482820110', 'Earl', 'Barkas', '1986/11/19', '517 Cascade Park', '99312554', 'ebarkasa@parallels.com', 'M', 154, 0, 1);
+insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('8115482820110', 'Earl', 'Barkas', '1986/11/19', '517 Cascade Park', '99312554', 'ebarkasa@parallels.com', 'M', 154, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('8791060622122', 'Emilio', 'Rapley', '1983/11/30', '5257 Stuart Plaza', '86384719', 'erapleyb@tumblr.com', 'M', 108, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('8221086931023', 'Bron', 'Proudlove', '1993/07/12', '6 Kedzie Drive', '96750506', 'bproudlovec@businesswire.com', 'M', 138, 0, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('6786142092223', 'Shannon', 'Challes', '1978/03/11', '99 Dakota Avenue', '99193672', 'schallesd@addtoany.com', 'F', 180, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9199118462023', 'Hoebart', 'McCook', '1986/11/04', '44 Katie Junction', '89873418', 'hmccooke@hc360.com', 'M', 101, 0, 1);
-insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9956216282222', 'Sigrid', 'Porrett', '1986/11/29', '4 Memorial Way', '98095563', 'sporrettf@google.cn', 'F', 130, 0, 1);
+insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9956216282222', 'Sigrid', 'Porrett', '1986/11/29', '4 Memorial Way', '98095563', 'sporrettf@google.cn', 'F', 130, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('8226304770221', 'Perceval', 'Stihl', '1999/03/30', '84 Roth Terrace', '95293429', 'pstihlg@biglobe.ne.jp', 'M', 197, 1, 1);
-insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('7077125932123', 'Bengt', 'Andreotti', '1982/04/18', '125 Farmco Street', '99985931', 'bandreottih@pinterest.com', 'M', 190, 0, 1);
+insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('7077125932123', 'Bengt', 'Andreotti', '1982/04/18', '125 Farmco Street', '99985931', 'bandreottih@pinterest.com', 'M', 190, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('8626524740213', 'Niki', 'Mearns', '1976/10/15', '53 Pine View Center', '89163219', 'nmearnsi@youku.com', 'M', 170, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9806091372223', 'Victoir', 'McDermott', '1987/06/12', '61415 Birchwood Park', '98775408', 'vmcdermottj@networksolutions.com', 'M', 111, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9646407860213', 'Maryann', 'Cochern', '1988/09/10', '82292 Grim Park', '77614207', 'mcochernk@prweb.com', 'F', 191, 0, 1);
-insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('6415180661111', 'Martita', 'Rosenboim', '1976/03/16', '913 Magdeline Street', '99076163', 'mrosenboiml@nydailynews.com', 'F', 173, 0, 1);
+insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('6415180661111', 'Martita', 'Rosenboim', '1976/03/16', '913 Magdeline Street', '99076163', 'mrosenboiml@nydailynews.com', 'F', 173, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9337806330213', 'Kurtis', 'Newlin', '1991/02/08', '319 Dorton Avenue', '89744692', 'knewlinm@booking.com', 'M', 163, 0, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9544181592123', 'Costanza', 'Emmerson', '2001/09/23', '867 Hagan Pass', '79023148', 'cemmersonn@unc.edu', 'F', 125, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('8661815922221', 'Louisette', 'Aldin', '2000/04/27', '99730 3rd Alley', '88619254', 'laldino@cocolog-nifty.com', 'F', 145, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9078790492203', 'Glori', 'Salway', '1990/12/10', '5 Crownhardt Point', '79939794', 'gsalwayp@discuz.net', 'F', 187, 0, 1);
-insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9751925631020', 'Arnie', 'Strutz', '1985/10/27', '31 Butternut Terrace', '89883846', 'astrutzq@vk.com', 'M', 117, 0, 1);
+insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9751925631020', 'Arnie', 'Strutz', '1985/10/27', '31 Butternut Terrace', '89883846', 'astrutzq@vk.com', 'M', 117, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('4355116870223', 'Even', 'Gladdor', '1998/11/23', '3 Manufacturers Trail', '99911264', 'egladdorr@berkeley.edu', 'M', 206, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9227586672023', 'Joseph', 'Guirardin', '1989/05/05', '72735 Oak Drive', '59433211', 'jguirardins@theguardian.com', 'M', 176, 0, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('7465066732023', 'Vita', 'Yurkiewicz', '1996/10/28', '77304 Miller Plaza', '87088827', 'vyurkiewiczt@clickbank.net', 'F', 197, 1, 1);
-insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('8692167711123', 'Richardo', 'Batthew', '1976/08/20', '80 Clove Drive', '99774568', 'rbatthewu@skyrock.com', 'M', 165, 0, 1);
+insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('8692167711123', 'Richardo', 'Batthew', '1976/08/20', '80 Clove Drive', '99774568', 'rbatthewu@skyrock.com', 'M', 165, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9651682770022', 'Mort', 'Linck', '1989/06/10', '8 Prentice Pass', '49737970', 'mlinckv@timesonline.co.uk', 'M', 198, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9676860882000', 'Leena', 'McNeish', '1985/01/16', '05186 Melrose Crossing', '79422386', 'lmcneishw@icq.com', 'F', 207, 0, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9563520020122', 'Melessa', 'McEntegart', '1979/06/11', '37198 Wayridge Alley', '78999240', 'mmcentegartx@omniture.com', 'F', 101, 1, 1);
-insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9541115331200', 'Lacey', 'Brockington', '1998/06/07', '53 Esch Point', '99249479', 'lbrockingtony@ebay.co.uk', 'F', 158, 0, 1);
+insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9541115331200', 'Lacey', 'Brockington', '1998/06/07', '53 Esch Point', '99249479', 'lbrockingtony@ebay.co.uk', 'F', 158, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('7939775692123', 'Arman', 'Canon', '1998/03/24', '04718 Paget Terrace', '97355317', 'acanonz@senate.gov', 'M', 132, 0, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9559622090223', 'Graham', 'Gawthrop', '1988/07/24', '37 Dayton Terrace', '99905885', 'ggawthrop10@accuweather.com', 'M', 180, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9467022142001', 'Manfred', 'Grob', '1999/09/28', '16 American Way', '99626684', 'mgrob11@smugmug.com', 'M', 194, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9603305861113', 'Ashil', 'MacCarlich', '1995/11/29', '04 John Wall Way', '59805914', 'amaccarlich12@unc.edu', 'F', 114, 1, 1);
-insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9438298670223', 'Monte', 'Boumphrey', '1996/02/21', '60 Boyd Court', '56493185', 'mboumphrey13@blogs.com', 'M', 151, 0, 1);
+insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9438298670223', 'Monte', 'Boumphrey', '1996/02/21', '60 Boyd Court', '56493185', 'mboumphrey13@blogs.com', 'M', 151, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('7284235770021', 'Deana', 'Frankel', '1994/04/11', '92926 Burrows Point', '79040794', 'dfrankel14@bizjournals.com', 'F', 140, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9618322402123', 'Cathie', 'Flipek', '1988/04/18', '11 Waubesa Drive', '98376941', 'cflipek15@w3.org', 'F', 147, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9869524461202', 'Octavius', 'Papen', '1983/07/25', '0 Thackeray Avenue', '99214673', 'opapen16@sogou.com', 'M', 103, 1, 1);
-insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9222499962121', 'Berti', 'Denne', '2000/06/02', '8247 Lotheville Court', '99127919', 'bdenne17@4shared.com', 'M', 143, 0, 1);
+insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9222499962121', 'Berti', 'Denne', '2000/06/02', '8247 Lotheville Court', '99127919', 'bdenne17@4shared.com', 'M', 143, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9688940852111', 'Lenard', 'MacCafferty', '1981/06/09', '65407 Alpine Street', '89545472', 'lmaccafferty18@forbes.com', 'M', 208, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9723743210023', 'Kore', 'Netti', '1977/08/21', '401 Northview Alley', '88426246', 'knetti19@blog.com', 'F', 149, 1, 1);
-insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9186864262203', 'Munmro', 'Weippert', '1981/05/29', '0773 Golf View Park', '69612994', 'mweippert1a@yolasite.com', 'M', 152, 0, 1);
-insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('6071475412222', 'Rhoda', 'Isham', '1993/04/14', '037 Hanover Pass', '78518599', 'risham1b@slate.com', 'F', 142, 0, 1);
+insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9186864262203', 'Munmro', 'Weippert', '1981/05/29', '0773 Golf View Park', '69612994', 'mweippert1a@yolasite.com', 'M', 152, 1, 1);
+insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('6071475412222', 'Rhoda', 'Isham', '1993/04/14', '037 Hanover Pass', '78518599', 'risham1b@slate.com', 'F', 142, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('8897236322120', 'Jacquenetta', 'Boocock', '1979/11/21', '801 Grover Crossing', '63264949', 'jboocock1c@netscape.com', 'F', 166, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('8893306841203', 'Constantino', 'Brehaut', '1988/08/21', '301 Ryan Pass', '79114734', 'cbrehaut1d@hostgator.com', 'M', 187, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9779331030221', 'Agnese', 'Brownsea', '1980/07/15', '8 Westridge Plaza', '78147369', 'abrownsea1e@icq.com', 'F', 143, 1, 1);
@@ -374,17 +374,17 @@ insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefo
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9920562272200', 'Flss', 'Raynard', '1979/03/11', '32 Dovetail Parkway', '99710270', 'fraynard1p@nationalgeographic.com', 'F', 150, 0, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('6295733661223', 'Royall', 'Ray', '1981/11/05', '127 Cardinal Center', '98458911', 'rray1q@nyu.edu', 'M', 205, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('8547597012222', 'Olimpia', 'Gurry', '1999/07/09', '863 Laurel Drive', '96060107', 'ogurry1r@ca.gov', 'F', 102, 0, 1);
-insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('7382755712103', 'Carolan', 'Pinchin', '2000/04/18', '86603 Moose Trail', '99815909', 'cpinchin1s@kickstarter.com', 'F', 134, 0, 1);
+insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('7382755712103', 'Carolan', 'Pinchin', '2000/04/18', '86603 Moose Trail', '99815909', 'cpinchin1s@kickstarter.com', 'F', 134, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9922839831010', 'Regine', 'Halversen', '1991/01/29', '93 Kensington Way', '98717958', 'rhalversen1t@tmall.com', 'F', 160, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('8321640930212', 'Sofia', 'Singyard', '1987/10/06', '9966 5th Parkway', '99140014', 'ssingyard1u@sciencedaily.com', 'F', 168, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('8750319912203', 'Jessey', 'Hodjetts', '1978/07/11', '95 Killdeer Crossing', '97027125', 'jhodjetts1v@accuweather.com', 'M', 100, 1, 1);
-insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('8224787862202', 'Rubie', 'MacBarron', '1994/05/26', '046 Declaration Way', '89017558', 'rmacbarron1w@state.gov', 'F', 157, 0, 1);
+insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('8224787862202', 'Rubie', 'MacBarron', '1994/05/26', '046 Declaration Way', '89017558', 'rmacbarron1w@state.gov', 'F', 157, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9679915730001', 'Robbert', 'Baudino', '1985/07/26', '68 Troy Crossing', '96030710', 'rbaudino1x@creativecommons.org', 'M', 203, 1, 1);
-insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9965958531122', 'Valle', 'Tall', '1996/08/13', '3 Jenifer Point', '86395485', 'vtall1y@accuweather.com', 'M', 188, 0, 1);
+insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9965958531122', 'Valle', 'Tall', '1996/08/13', '3 Jenifer Point', '86395485', 'vtall1y@accuweather.com', 'M', 188, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9557517452223', 'Dina', 'Garnall', '1984/07/09', '21 Sunnyside Place', '89161109', 'dgarnall1z@mit.edu', 'F', 139, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('7484662472223', 'Desi', 'Spiaggia', '2001/02/21', '6 Dapin Terrace', '99510171', 'dspiaggia20@toplist.cz', 'M', 195, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9556965740012', 'Waylin', 'Flewan', '1999/03/09', '0 Melby Circle', '89374123', 'wflewan21@phoca.cz', 'M', 145, 1, 1);
-insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9318279430100', 'Hyacinthia', 'Skahill', '1985/05/03', '8 Straubel Center', '79858291', 'hskahill22@quantcast.com', 'F', 177, 0, 1);
+insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9318279430100', 'Hyacinthia', 'Skahill', '1985/05/03', '8 Straubel Center', '79858291', 'hskahill22@quantcast.com', 'F', 177, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('6214670632223', 'Rozanna', 'Jeays', '1991/12/09', '111 Manitowish Avenue', '59012982', 'rjeays23@theatlantic.com', 'F', 148, 0, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('6524775062220', 'Benedetto', 'Drance', '2000/03/18', '44 Surrey Terrace', '79985686', 'bdrance24@example.com', 'M', 142, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('8799567542013', 'Brant', 'Doogue', '1977/08/17', '78351 Sugar Street', '99801477', 'bdoogue25@stanford.edu', 'M', 193, 1, 1);
@@ -394,7 +394,7 @@ insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefo
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('8153268261223', 'Sigismundo', 'Mathews', '1987/06/30', '43 Muir Hill', '88312248', 'smathews29@cnbc.com', 'M', 130, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('7726291570211', 'Dede', 'Cortin', '1981/08/19', '972 Sherman Circle', '97157228', 'dcortin2a@google.co.uk', 'F', 138, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9795034562013', 'Octavia', 'Landrean', '1991/07/11', '8 Brickson Park Plaza', '98768646', 'olandrean2b@mapy.cz', 'F', 183, 1, 1);
-insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9259920190223', 'Ulrick', 'Perett', '2000/01/17', '28124 Little Fleur Plaza', '97054088', 'uperett2c@auda.org.au', 'M', 107, 0, 1);
+insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9259920190223', 'Ulrick', 'Perett', '2000/01/17', '28124 Little Fleur Plaza', '97054088', 'uperett2c@auda.org.au', 'M', 107, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('8916991870200', 'Ailey', 'Foley', '1995/05/01', '27804 Sheridan Hill', '84828792', 'afoley2d@scribd.com', 'F', 172, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9032290801220', 'Janeta', 'Rao', '1997/02/17', '0 Vidon Plaza', '99673848', 'jrao2e@google.co.uk', 'F', 200, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('8572583082111', 'Bobette', 'Doni', '1979/10/22', '07725 Esch Pass', '79901067', 'bdoni2f@blogtalkradio.com', 'F', 177, 1, 1);
@@ -402,6 +402,7 @@ insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefo
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9923343152003', 'Rabi', 'Cully', '1985/08/16', '9 Bowman Pass', '99570677', 'rcully2h@icq.com', 'M', 199, 0, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9628641572023', 'Delora', 'McNirlin', '1980/08/27', '54207 Beilfuss Pass', '99057498', 'dmcnirlin2i@homestead.com', 'F', 195, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9224684082212', 'Libbey', 'MacIver', '1984/04/20', '92 Blue Bill Park Street', '85894842', 'lmaciver2j@sciencedirect.com', 'F', 128, 1, 1);
+
 
 #################################################################################################################
 insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (1, 25, 70);
@@ -422,7 +423,7 @@ insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps)
 insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (1, 22, 87);
 insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (3, 11, 99);
 insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (4, 37, 79);
-insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (2, 4, 59);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (2, 21, 59);
 insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (1, 1, 35);
 insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (3, 5, 23);
 insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (3, 23, 29);
@@ -430,10 +431,10 @@ insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps)
 insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (3, 15, 69);
 insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (4, 22, 53);
 insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (4, 23, 25);
-insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (2, 4, 14);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (2, 12, 14);
 insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (3, 37, 35);
 insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (2, 26, 55);
-insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (4, 27, 75);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (4, 15, 75);
 insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (2, 10, 81);
 insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (1, 6, 40);
 insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (1, 26, 10);
@@ -441,19 +442,108 @@ insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps)
 insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (2, 29, 49);
 insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (2, 36, 13);
 insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (4, 26, 77);
-insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (2, 31, 86);
-insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (4, 25, 56);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (2, 37, 86);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (3, 22, 56);
 insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (3, 19, 30);
 insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (4, 20, 45);
 insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (4, 8, 29);
-insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (2, 12, 11);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (1, 12, 11);
 insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (4, 5, 29);
 insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (3, 31, 73);
 insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (3, 33, 86);
-insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (2, 10, 55);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (4, 10, 55);
 insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (1, 19, 80);
 insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (2, 7, 93);
 insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (4, 34, 17);
+
+#########################################################################################################
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (1, 'Ergonomic clear-thinking forecast', 1, 4, 21);
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (2, 'Managed methodical policy', 3, 2, 18);
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (3, 'Networked encompassing internet solution', 3, 3, 9);
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (4, 'Robust systematic projection', 2, 2, 35);
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (5, 'Self-enabling reciprocal functionalities', 2, 4, 16);
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (6, 'Pre-emptive exuding capability', 1, 2, 8);
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (7, 'Customizable client-driven hardware', 2, 3, 37);
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (8, 'Cross-platform multimedia local area network', 1, 3, 31);
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (9, 'User-friendly zero administration application', 2, 4, 32);
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (10, 'Adaptive 24 hour intranet', 1, 1, 33);
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (11, 'Face to face web-enabled parallelism', 2, 2, 36);
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (12, 'Right-sized executive structure', 3, 4, 8);
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (13, 'Pre-emptive demand-driven pricing structure', 2, 4, 30);
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (14, 'Public-key dynamic functionalities', 3, 1, 8);
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (15, 'Function-based user-facing task-force', 1, 2, 28);
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (16, 'Polarised bi-directional analyzer', 3, 3, 31);
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (17, 'Robust context-sensitive Graphical User Interface', 2, 3, 28);
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (18, 'Managed didactic matrix', 1, 1, 7);
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (19, 'Digitized regional algorithm', 2, 1, 33);
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (20, 'Versatile mission-critical definition', 2, 1, 24);
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (21, 'Optional national open architecture', 1, 3, 33);
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (22, 'Ameliorated needs-based secured line', 1, 4, 36);
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (23, 'Monitored upward-trending internet solution', 2, 4, 8);
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (24, 'Synergistic human-resource throughput', 1, 4, 30);
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (25, 'Assimilated demand-driven customer loyalty', 1, 2, 2);
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (26, 'Seamless bandwidth-monitored groupware', 1, 3, 30);
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (27, 'Secured discrete circuit', 2, 1, 36);
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (28, 'Down-sized bi-directional task-force', 1, 2, 8);
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (29, 'Proactive context-sensitive conglomeration', 3, 4, 25);
+insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) values (30, 'Optimized composite firmware', 2, 1, 19);
+
+####################################################################################################################
+
+
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (1, '2020/03/02', 25, 8485706560202, 8);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (2, '2020/01/10', 6, 6052751122013, 7);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (3, '2020/02/21', 16, 8796485272222, 1);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (4, '2020/03/10', 15, 9830241210222, 6);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (5, '2020/02/03', 28, 8262908402203, 5);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (6, '2020/02/03', 26, 6052751122013, 4);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (7, '2020/02/18', 14, 8262908402203, 6);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (8, '2020/02/15', 26, 9457378362113, 10);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (9, '2020/02/15', 20, 8485706560202, 11);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (10, '2020/03/21', 15, 9457378362113, 9);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (11, '2020/03/09', 4, 8262908402203, 7);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (12, '2020/02/12', 29, 8485706560202, 8);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (13, '2020/02/20', 22, 9830241210222, 1);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (14, '2020/02/27', 8, 9457378362113, 4);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (15, '2020/03/23', 26, 9457378362113, 5);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (16, '2020/02/06', 16, 8262908402203, 3);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (17, '2020/02/11', 8, 7334292970203, 2);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (18, '2020/01/22', 20, 9830241210222, 5);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (19, '2020/03/02', 18, 9457378362113, 3);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (20, '2020/02/06', 23, 8485706560202, 6);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (21, '2020/02/27', 11, 7501617290123, 7);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (22, '2020/02/20', 21, 8767631282023, 4);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (23, '2020/02/05', 16, 6052751122013, 3);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (24, '2020/02/15', 15, 8767631282023, 9);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (25, '2020/02/08', 24, 9830241210222, 10);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (26, '2020/01/11', 9, 9830241210222, 10);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (27, '2020/01/24', 3, 8796485272222, 3);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (28, '2020/02/07', 15, 8767631282023, 6);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (29, '2020/01/17', 9, 8485706560202, 2);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (30, '2020/02/13', 11, 8796485272222, 5);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (31, '2020/01/31', 22, 7501617290123, 7);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (32, '2020/03/20', 14, 6052751122013, 8);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (33, '2020/01/23', 11, 9830241210222, 5);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (34, '2020/02/03', 21, 9457378362113, 2);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (35, '2020/02/07', 27, 6052751122013, 6);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (36, '2020/03/03', 5, 8485706560202, 1);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (37, '2020/02/14', 7, 9457378362113, 3);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (38, '2020/02/24', 22, 9830241210222, 8);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (39, '2020/02/19', 13, 8485706560202, 8);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (40, '2020/03/20', 7, 7501617290123, 7);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (41, '2020/01/24', 2, 8796485272222, 4);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (42, '2020/01/03', 9, 9457378362113, 5);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (43, '2020/02/10', 5, 8542089321103, 4);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (44, '2020/01/29', 17, 8767631282023, 1);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (45, '2020/03/16', 4, 8542089321103, 2);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (46, '2020/02/03', 15, 7501617290123, 6);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (47, '2020/02/21', 7, 8796485272222, 2);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (48, '2020/03/12', 3, 9457378362113, 1);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (49, '2020/02/17', 5, 9457378362113, 2);
+insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (50, '2020/03/12', 5, 8796485272222, 5);
+
+
+#####################################################################################################################################
 
 
 COMMIT;
