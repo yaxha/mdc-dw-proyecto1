@@ -110,7 +110,7 @@ VALUES
 (33,'Sit Up', 'SU', 'Abdominales', 'N', 'Base', 1, 1),
 (34,'Thrusters', 'TH', 'Levantamiento de pesa desde el pecho', 'S', 'Base', 3, 3),
 (35,'Single-leg Squat', 'SLSQ','Sentadilla con una sola pierna','N','Variación',1,1),
-(36,'Run', 'RN', 'Sprint/Correr', 'N', 'Base', 4, 1),
+(36,'Run', 'RN', 'Spint/Correr', 'N', 'Base', 4, 1),
 (37,'Kettlebell Swing', 'KS', 'Balanceo de Kettlebell', 'S', 'Base', 1, 2);
 
 ##############################################################################################################################
@@ -170,6 +170,7 @@ VALUES
 
 ###############################################################################################################################
 
+#The Girls
 INSERT INTO detalle_wod
     (id_wod, id_movimiento, cantidad_reps)
 VALUES
@@ -245,6 +246,58 @@ VALUES
     (20, 6, NULL),
     #Grace
     (21, 5, 30);
+
+#Wods creados por el gimnasio
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (32, 9, 37);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (28, 10, 50);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (28, 35, 7);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (34, 6, 30);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (32, 14, 9);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (32, 30, 37);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (32, 35, 24);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (38, 15, 7);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (38, 28, 36);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (24, 28, 26);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (32, 16, 36);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (23, 36, 39);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (42, 29, 26);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (35, 8, 13);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (34, 28, 35);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (31, 31, 23);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (36, 36, 42);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (29, 33, 29);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (40, 12, 21);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (35, 35, 30);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (41, 23, 9);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (25, 11, 28);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (28, 16, 37);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (42, 14, 46);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (27, 25, 33);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (38, 26, 39);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (42, 23, 36);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (40, 21, 21);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (22, 36, 35);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (36, 31, 41);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (42, 3, 23);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (22, 13, 17);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (26, 29, 42);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (32, 26, 12);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (40, 10, 27);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (36, 3, 41);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (41, 33, 32);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (42, 12, 12);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (39, 18, 32);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (34, 23, 17);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (31, 35, 8);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (35, 3, 45);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (22, 30, 16);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (42, 27, 17);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (37, 26, 30);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (40, 25, 41);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (33, 6, 23);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (22, 5, 46);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (27, 11, 40);
+insert into detalle_wod (id_wod, id_movimiento, cantidad_reps) values (24, 23, 9);
 
 ################################################################################################################################
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('7501617290123', 'Alfi', 'Tipling', '1992/10/04', '0811 Karstens Park', '94974128', 'atipling0@google.es', 'F', 120, 1, 2);
@@ -350,5 +403,61 @@ insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefo
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9628641572023', 'Delora', 'McNirlin', '1980/08/27', '54207 Beilfuss Pass', '99057498', 'dmcnirlin2i@homestead.com', 'F', 195, 1, 1);
 insert into personas (dpi, nombres, apellidos, fec_nacimiento, direccion, telefono, email, genero, peso_libras, estado, id_tipo_persona) values ('9224684082212', 'Libbey', 'MacIver', '1984/04/20', '92 Blue Bill Park Street', '85894842', 'lmaciver2j@sciencedirect.com', 'F', 128, 1, 1);
 
+#################################################################################################################
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (1, 25, 70);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (1, 10, 13);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (2, 31, 96);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (2, 18, 73);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (4, 25, 40);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (2, 4, 38);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (3, 6, 70);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (4, 32, 66);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (2, 27, 14);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (1, 5, 35);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (1, 33, 45);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (3, 29, 85);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (2, 34, 39);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (4, 27, 43);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (3, 10, 90);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (1, 22, 87);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (3, 11, 99);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (4, 37, 79);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (2, 4, 59);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (1, 1, 35);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (3, 5, 23);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (3, 23, 29);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (1, 20, 71);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (3, 15, 69);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (4, 22, 53);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (4, 23, 25);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (2, 4, 14);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (3, 37, 35);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (2, 26, 55);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (4, 27, 75);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (2, 10, 81);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (1, 6, 40);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (1, 26, 10);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (2, 24, 56);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (2, 29, 49);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (2, 36, 13);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (4, 26, 77);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (2, 31, 86);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (4, 25, 56);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (3, 19, 30);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (4, 20, 45);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (4, 8, 29);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (2, 12, 11);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (4, 5, 29);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (3, 31, 73);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (3, 33, 86);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (2, 10, 55);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (1, 19, 80);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (2, 7, 93);
+insert into detalle_especialidad (id_especialidad, id_movimiento, cantidad_reps) values (4, 34, 17);
+
 
 COMMIT;
+
+
+
+
