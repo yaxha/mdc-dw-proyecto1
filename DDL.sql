@@ -175,10 +175,10 @@ CREATE TABLE IF NOT EXISTS horario(
 #Esta tabla tendrá un trigger para validar que un entrenador no pueda estar asignado
 # a más de 3 sesiones en un mismo día
 CREATE TABLE IF NOT EXISTS sesion(
-    id_sesion     INT  PRIMARY KEY  NOT NULL,
+    id_sesion     INT  AUTO_INCREMENT PRIMARY KEY  NOT NULL,
     fecha         DATE  NOT NULL,
     id_clase      INT   NOT NULL,
-    dpi_entrenador  NUMERIC(20)   NOT NULL,
+    dpi_entrenador  NUMERIC(20)   NULL,
     id_horario    INT   NOT NULL,
 
     INDEX Ref1223(id_clase),
