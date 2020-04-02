@@ -1,10 +1,11 @@
- /*
+/*
 PROYECTO CROSSFIT
 Curso: Diseño y Construcción de Data Warehouse
 Autores:
     Lilian Rebeca Carrera Lemus
     José Armando Barrios León
 */
+#DROP DATABASE CROSSFIT;
 CREATE DATABASE IF NOT EXISTS CROSSFIT;
 USE CROSSFIT;
 
@@ -317,7 +318,7 @@ CREATE TRIGGER trg_insert_sesion
                     FROM sesion S
                     WHERE S.fecha = NEW.fecha
                         AND S.dpi_entrenador = NEW.dpi_entrenador
-                    GROUP BY S.fecha, S.dpi_entrenador) > 3
+                    GROUP BY S.fecha, S.dpi_entrenador) >= 3
                 THEN
                     SIGNAL SQLSTATE '45002'
                         SET MESSAGE_TEXT = 'Este entrenador no pudo ser adherido a la sesión porque ya ha dado 3 sesiones este día.';
@@ -337,6 +338,7 @@ Trigger para validar que solo se inserten valores donde el peso sea mayor al rec
 * Que sea un movimiento que permita records personales
 * Que el atleta esté solvente para registrar su record
 */
+#DROP TRIGGER trg_insert_pr;
 CREATE TRIGGER trg_insert_pr
     BEFORE INSERT ON historial_pr FOR EACH ROW
     BEGIN
@@ -345,15 +347,67 @@ CREATE TRIGGER trg_insert_pr
             FROM movimientos m
             WHERE m.id_movimiento = NEW.id_movimiento) = 'S'
         THEN
-            # Verificar que el peso nuevo es mayor al registrado previamente
-            IF (SELECT pr.peso_pr
-                FROM historial_pr pr
-                WHERE pr.dpi_atleta = NEW.dpi_atleta
-                    AND pr.id_especialidad = NEW.id_especialidad
-                    AND pr.id_movimiento = NEW.id_movimiento) > NEW.peso_pr
+            #Verificar que el atleta haya participado en la sesión
+            IF EXISTS(SELECT 1
+                    FROM detalle_sesion ds
+                    WHERE ds.id_sesion = NEW.id_sesion
+                        AND ds.dpi_atleta = NEW.dpi_atleta)
             THEN
-                SIGNAL SQLSTATE '45003'
-                    SET MESSAGE_TEXT = 'Record no insertado porque ya existe uno con mayor peso para este atleta en este movimiento.';
+                # Verificar que la fecha de la sesión indicada sea más reciente
+                # que la última sesión que tuvo el atleta
+                # o que no exista un registro previo de dicho movimiento
+                IF  #Si no existen registros previos
+                    ((SELECT COUNT(1)
+                        FROM detalle_sesion
+                        WHERE detalle_sesion.dpi_atleta = NEW.dpi_atleta) > 0)
+                THEN
+                    # Si la fecha de esta sesión a ingresar es más reciente que la última registrada para el atleta
+                    IF ((SELECT s.fecha
+                        FROM sesion s
+                        INNER JOIN detalle_sesion d ON s.id_sesion = d.id_sesion
+                        WHERE d.dpi_atleta = NEW.dpi_atleta
+                        ORDER BY s.fecha DESC
+                        LIMIT 1) #fecha de la última sesión de este atleta
+                       <= (SELECT fecha
+                            FROM sesion
+                            WHERE sesion.id_sesion = NEW.id_sesion) )#fecha de la sesión que se quiere grabar
+                    THEN
+                        #Verificar la especialidad del movimiento
+                        IF EXISTS(SELECT 1
+                            FROM detalle_especialidad de
+                            WHERE de.id_especialidad = NEW.id_especialidad
+                                AND de.id_movimiento = NEW.id_movimiento)
+                        THEN
+                            # Verificar que el peso nuevo es mayor al registrado previamente
+                            IF ((SELECT COUNT(1)
+                                FROM historial_pr pr1
+                                WHERE pr1.dpi_atleta = NEW.dpi_atleta
+                                    AND pr1.id_especialidad = NEW.id_especialidad
+                                    AND pr1.id_movimiento = NEW.id_movimiento) > 0)
+                            THEN
+                                IF ((SELECT pr.peso_pr
+                                    FROM historial_pr pr
+                                    WHERE pr.dpi_atleta = NEW.dpi_atleta
+                                        AND pr.id_especialidad = NEW.id_especialidad
+                                        AND pr.id_movimiento = NEW.id_movimiento) > NEW.peso_pr)
+                                THEN
+                                    SIGNAL SQLSTATE '45003'
+                                        SET MESSAGE_TEXT = 'Record no insertado porque ya existe uno con mayor peso para este atleta en este movimiento.';
+                                END IF;
+                            END IF;
+                        ELSE
+                            SIGNAL SQLSTATE '45010'
+                                SET MESSAGE_TEXT = 'El movimiento indicado no pertenece a la especialidad dada.';
+                        END IF;
+                    ELSE
+                        SIGNAL SQLSTATE '45009'
+                            SET MESSAGE_TEXT = 'La fecha ingresada es menor a la fecha de la última sesión.';
+                    END IF;
+
+                END IF;
+            ELSE
+                SIGNAL SQLSTATE '45008'
+                    SET MESSAGE_TEXT = 'Está intentando ingresar un atleta que no participó en la sesión indicada.';
             END IF;
         ELSE
             SIGNAL SQLSTATE '45005'
