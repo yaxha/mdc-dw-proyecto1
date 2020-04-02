@@ -143,29 +143,29 @@ VALUES
 
 #Propios del gimnasio
 INSERT INTO wod
-	(id_wod, nombre, duracion_minutos, rx_masculino, rx_feminino, puntuacion_meta, descanso, descripcion, id_modalidad, id_categoria, id_tipo_puntuacion)
+    (id_wod, nombre, duracion_minutos, rx_masculino, rx_feminino, puntuacion_meta, descanso, descripcion, id_modalidad, id_categoria, id_tipo_puntuacion)
 VALUES
-    (22, 'Horst', 21, 225, 69, 6, 'Canis dingo', 'Adaptive solution-oriented time-frame', 5, 1, 3),
-    (23, 'Kristin', 24, 26, 146, 19, 'Coluber constrictor', 'Public-key grid-enabled hierarchy', 1, 1, 3),
-    (24, 'Winnah', 19, 30, 61, 175, 'Phoenicopterus ruber', 'Decentralized web-enabled framework', 6, 1, 3),
-    (25, 'Marlena', 20, 51, 123, 9, 'Gyps bengalensis', 'Self-enabling intermediate initiative', 4, 1, 1),
-    (26, 'Haroun', 15, 27, 152, 20, 'Cercopithecus aethiops', 'Pre-emptive mission-critical Graphic Interface', 6, 1, 2),
-    (27, 'Lauraine', 21, 129, 136, 7, 'Oreotragus oreotragus', 'Face to face upward-trending structure', 6, 1, 2),
-    (28, 'Yank', 24, 214, 54, 19, 'Streptopelia decipiens', 'Focused heuristic projection', 1, 1, 2),
-    (29, 'Stepha', 15, 219, 40, 16, 'Anastomus oscitans', 'Optional cohesive Graphical User Interface', 2, 1, 1),
-    (30, 'Marcos', 19, 134, 61, 100, 'Castor canadensis', 'Synergized national secured line', 5, 1, 3),
-    (31, 'Nevsa', 30, 84, 52, 120, 'Otocyon megalotis', 'Sharable directional groupware', 6, 1, 3),
-    (32, 'Nathalia', 30, 190, 134, 150, 'Laniarius ferrugineus', 'Realigned user-facing database', 4, 1, 3),
-    (33, 'Gwenneth', 24, 71, 63, 12, 'Dasypus novemcinctus', 'Decentralized attitude-oriented extranet', 4, 1, 1),
-    (34, 'Mathew', 15, 78, 121, 16, 'Naja sp.', 'Quality-focused mobile utilisation', 6, 1, 2),
-    (35, 'Talyah', 26, 59, 115, 10, 'Parus atricapillus', 'Persevering zero defect secured line', 3, 1, 2),
-    (36, 'Elvina', 26, 130, 33, 20, 'Laniaurius atrococcineus', 'Upgradable non-volatile support', 2, 1, 1),
-    (37, 'Lisle', 27, 103, 150, 14, 'Acanthaster planci', 'Automated bottom-line capacity', 5, 1, 2),
-    (38, 'Rogerio', 15, 150, 127, 18, 'Branta canadensis', 'Stand-alone heuristic hierarchy', 6, 1, 3),
-    (39, 'Nedi', 22, 182, 98, 18, 'Columba palumbus', 'Robust asynchronous superstructure', 6, 1, 1),
-    (40, 'Janet', 30, 157, 57, 12, 'Felis pardalis', 'Persevering tertiary installation', 3, 1, 1),
-    (41, 'Denys', 17, 65, 39, 17, 'Acridotheres tristis', 'Reverse-engineered optimizing artificial intelligence', 4, 1, 2),
-    (42, 'Cirilo', 18, 92, 154, 18, 'Choloepus hoffmani', 'Triple-buffered local leverage', 5, 1, 3);
+    (1, 'Barbara', 15, NULL, NULL, 5, 'Descansos de 1 minuto por ronda', '5 rounds, 3 minutos, descanso', 1, 3, 1),
+    (2, 'Chelsea', 30, NULL, NULL, 30, NULL, 'EMOM por 30 minutos', 2, 3, 2),
+    (3, 'Mary', 20, NULL, NULL, 20, NULL, 'AMRAP en 20 minutos', 1, 3, 2),
+    (4, 'Cindy', 20, NULL, NULL, 20, NULL, 'AMRAP en 20 minutos', 1, 3, 2),
+    (5, 'Annie', NULL, NULL, NULL, 300, NULL, '50-40-30-20-10', 4, 3, 3 ),
+    (6, 'Nicole', 20, NULL, NULL, 20, NULL, 'AMRAP en 20 minutos', 1, 3, 2),
+    (7, 'Angie', NULL, NULL, NULL, 20, NULL, NULL, 6, 3, 2),
+    (8, 'Eva', NULL, 70, 50, 5, NULL, '5 rondas', 1, 3, 2),
+    (9, 'Helen', NULL, 55, 35, 3, NULL, '3 rondas', 6, 3, 2),
+    (10, 'Kelly', NULL, 20, 14, 5, NULL, '5 rondas', 6, 3, 2),
+    (11, 'Karen', NULL, 20, 14, 15, NULL, 'AFAP', 6, 3, 2),
+    (12, 'Amanda', NULL, 135, 95, 12, NULL, 'AFAP', 6, 3, 2),
+    (13, 'Jackie', NULL, 45, 35, 10, NULL, 'AFAP', 6, 3, 2),
+    (14, 'Diane', NULL, 225, 155, 10, 'Descansos cortos de 3 a 10 segundos entre rondas', '21-15-9', 3, 3, 2),
+    (15, 'Fran', NULL, 95, 65, 7, NULL, '21-15-9', 3, 3, 2),
+    (16, 'Elizabeth', NULL, 135, 95, 10, 'Se permiten descansos de varios segundos', '21-15-9', 3, 3, 2),
+    (17, 'Nancy', NULL, 95, 65, 5, NULL, '5 rondas', 3, 3, 2),
+    (18, 'Lynne', NULL, NULL, NULL, 5, 'Tanto tiempo como sea necesario entre rondas', '5 rondas de repeticiones al máximo', 1, 3, 2),
+    (19, 'Isabel', NULL, 135, 95, 6, NULL, 'AFAP', 6, 3, 2),
+    (20, 'Linda', NULL, NULL, NULL, 25, NULL, '10-9-8-7-6-5-4-3-2-1', 3, 3, 2),
+    (21, 'Grace', NULL, 135, 95, 5, 'Muy poco o nulo descanso entre repeticiones', 'AFAP', 6, 3, 2);
 
 
 ###############################################################################################################################
@@ -547,15 +547,15 @@ insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) valu
 
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (28,8321640930212,'RX+',100,17.35);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (42,8115482820110,'RX+',40,155);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (48,9032290801220,'RX',35,3);
+insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (48,9032290801220,'RX',35,28.20);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (13,9779331030221,'RX',33,17);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (15,8626524740213,'RX',60,100);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (48,9922839831010,'RX',35,4);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (36,6071475412222,'SCALED',105,1.32);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (41,6052751122013,'SCALED',105,5);
+insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (48,9922839831010,'RX',35,29.01);
+insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (36,6071475412222,'SCALED',105,37.32);
+insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (41,6052751122013,'SCALED',105,34.12);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (22,8224787862202,'SCALED',50,12);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (18,9088943782010,'RX+',35,176);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (48,8153268261223,'RX+',60,4);
+insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (48,8153268261223,'RX+',60,26.05);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (34,8661815922221,'RX',63,12);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (13,7501617290123,'SCALED',33,15);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (33,9679915730001,'RX',130,20);
@@ -564,29 +564,29 @@ insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (43,5377856371120,'RX',95,10);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (6,9557517452223,'RX',60,102);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (33,9779331030221,'SCALED',125,20);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (48,9723743210023,'RX',35,5);
+insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (48,9723743210023,'RX',35,28.45);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (37,9088943782010,'SCALED',98,15.02);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (1,9688940852111,'RX+',125,25.02);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (1,7830588762103,'RX',120,30);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (40,7077125932123,'SCALED',122,15.21);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (38,8160967652200,'SCALED',120,15);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (9,9055965592213,'RX',60,175);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (41,9222499962121,'SCALED',100,4);
+insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (41,9222499962121,'SCALED',100,32.45);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (10,8160967652200,'RX+',195,15.36);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (30,8893306841203,'RX',130,21);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (40,8572583082111,'RX',150,14);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (36,8692167711123,'RX+',145,9.37);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (50,8485706560202,'RX+',100,8.35);
+insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (36,8692167711123,'RX+',145,24.31);
+insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (50,8485706560202,'RX+',100,8.23.48);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (44,7484662472223,'SCALED',42,19);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (41,8321640930212,'RX',110,5);
+insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (41,8321640930212,'RX',110,28.03);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (29,8750319912203,'RX',35,150);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (44,6415180661111,'SCALED',40,21.12);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (27,7484662472223,'RX',35,4);
+insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (27,7484662472223,'RX',35,30);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (30,9556965740012,'RX+',135,21);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (8,9541115331200,'RX',135,100);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (24,9318279430100,'SCALED',120,20.29);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (11,7077125932123,'RX+',195,8.07);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (20,9679915730001,'SCALED',60,3);
+insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (20,9679915730001,'SCALED',60,37.25);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (15,9132262182123,'SCALED',60,110);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (12,9956216282222,'SCALED',40,8);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (33,8224787862202,'SCALED',30,17);
@@ -594,18 +594,18 @@ insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (4,8153268261223,'SCALED',120,21.59);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (12,8226304770221,'SCALED',45,7);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (1,9965958531122,'RX+',120,27.12);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (27,9544181592123,'RX+',40,4);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (36,9092554091013,'RX+',140,9.35);
+insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (27,9544181592123,'RX+',40,24.12);
+insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (36,9092554091013,'RX+',140,22.35);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (30,6052751122013,'SCALED',120,18);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (14,5377856371120,'SCALED',75,110);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (49,9186864262203,'RX+',142,9.04);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (7,3669658330202,'SCALED',40,3);
+insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (49,9186864262203,'RX+',142,24.04);
+insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (7,3669658330202,'SCALED',40,35.34);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (25,9603305861113,'SCALED',55,98);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (27,7266934750223,'RX+',42,5);
+insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (27,7266934750223,'RX+',42,25.02);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (16,9438298670223,'RX',52,120);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (49,9556965740012,'RX',135,10);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (43,9467022142001,'RX+',102,9.36);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (20,7501617290123,'SCALED',45,4);
+insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (43,9467022142001,'RX+',102,26.36);
+insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (20,7501617290123,'SCALED',45,36.21);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (24,3669658330202,'RX+',130,17.25);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (25,7830588762103,'SCALED',52,95);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (3,9751925631020,'RX+',85,125);
@@ -623,11 +623,11 @@ insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (9,9830241210222,'RX+',70,200);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (23,8626524740213,'SCALED',45,115);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (9,9438298670223,'RX+',75,201);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (49,9688940852111,'RX',135,9.41);
+insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (49,9688940852111,'RX',135,25.41);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (45,9438298670223,'SCALED',100,11.2);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (24,5377856371120,'RX',135,100);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (45,9318279430100,'SCALED',120,20.29);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (1,7077125932123,'RX+',195,8.07);
+insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (1,7077125932123,'RX+',195,23.07);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (11,9679915730001,'SCALED',60,3);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (23,9132262182123,'SCALED',60,110);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (37,9956216282222,'SCALED',40,8);
@@ -642,10 +642,10 @@ insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (1,9186864262203,'RX+',128,28.09);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (9,6524775062220,'RX+',70,200);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (44,9092554091013,'SCALED',40,21.12);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (27,5377856371120,'RX',35,4);
+insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (27,5377856371120,'RX',35,30.22);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (30,9132262182123,'RX+',135,21);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (11,7484662472223,'SCALED',100,15);
-INSERT into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) VALUE (41, '7501617290123', '12', 500, 45);
+
 
 ################################################################################################################################
 
@@ -713,7 +713,6 @@ INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento,
 INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (27,'5377856371120', 3, 19, 10);
 INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (27,'7266934750223', 3, 19, 180);
 INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (22,'8224787862202', 3, 19, 173);
-
 INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (34,'8661815922221', 3, 19, 17);
 INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (34,'8796485272222', 3, 19, 168);
 INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (6,'8452434922102', 3, 19, 188);
