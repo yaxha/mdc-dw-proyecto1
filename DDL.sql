@@ -356,19 +356,21 @@ CREATE TRIGGER trg_insert_pr
                 # Verificar que la fecha de la sesión indicada sea más reciente
                 # que la última sesión que tuvo el atleta
                 # o que no exista un registro previo de dicho movimiento
-                IF  #Si no existen registros previos
+                IF  #Si existen registros previos
                     ((SELECT COUNT(1)
-                        FROM detalle_sesion
-                        WHERE detalle_sesion.dpi_atleta = NEW.dpi_atleta) > 0)
+                        FROM historial_pr
+                        WHERE historial_pr.dpi_atleta = NEW.dpi_atleta) > 0)
+                    #Continuar evaluando
                 THEN
                     # Si la fecha de esta sesión a ingresar es más reciente que la última registrada para el atleta
                     IF ((SELECT s.fecha
                         FROM sesion s
                         INNER JOIN detalle_sesion d ON s.id_sesion = d.id_sesion
                         WHERE d.dpi_atleta = NEW.dpi_atleta
+                            #AND s.id_sesion <> NEW.id_sesion
                         ORDER BY s.fecha DESC
                         LIMIT 1) #fecha de la última sesión de este atleta
-                       <= (SELECT fecha
+                       >= (SELECT fecha
                             FROM sesion
                             WHERE sesion.id_sesion = NEW.id_sesion) )#fecha de la sesión que se quiere grabar
                     THEN
