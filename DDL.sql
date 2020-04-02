@@ -1,11 +1,10 @@
-/*
+ /*
 PROYECTO CROSSFIT
 Curso: Diseño y Construcción de Data Warehouse
 Autores:
     Lilian Rebeca Carrera Lemus
     José Armando Barrios León
 */
-#DROP DATABASE CROSSFIT;
 CREATE DATABASE IF NOT EXISTS CROSSFIT;
 USE CROSSFIT;
 
