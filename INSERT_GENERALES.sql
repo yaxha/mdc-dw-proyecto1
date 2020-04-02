@@ -114,34 +114,7 @@ VALUES
 (37,'Kettlebell Swing', 'KS', 'Balanceo de Kettlebell', 'S', 'Base', 1, 2);
 
 ##############################################################################################################################
-
 #The Girls
-INSERT INTO wod
-    (id_wod, nombre, duracion_minutos, rx_masculino, rx_feminino, puntuacion_meta, descanso, descripcion, id_modalidad, id_categoria, id_tipo_puntuacion)
-VALUES
-    (1, 'Barbara', 15, NULL, NULL, 5, 'Descansos de 1 minuto por ronda', '5 rounds, 3 minutos, descanso', 1, 3, 1),
-    (2, 'Chelsea', 30, NULL, NULL, 30, NULL, 'EMOM por 30 minutos', 2, 3, 2),
-    (3, 'Mary', 20, NULL, NULL, 20, NULL, 'AMRAP en 20 minutos', 1, 3, 2),
-    (4, 'Cindy', 20, NULL, NULL, 20, NULL, 'AMRAP en 20 minutos', 1, 3, 2),
-    (5, 'Annie', NULL, NULL, NULL, 300, NULL, '50-40-30-20-10', 4, 3, 3 ),
-    (6, 'Nicole', 20, NULL, NULL, 20, NULL, 'AMRAP en 20 minutos', 1, 3, 2),
-    (7, 'Angie', NULL, NULL, NULL, 20, NULL, NULL, 6, 3, 2),
-    (8, 'Eva', NULL, 70, 50, 5, NULL, '5 rondas', 1, 3, 1),
-    (9, 'Helen', NULL, 55, 35, 3, NULL, '3 rondas', 6, 3, 1),
-    (10, 'Kelly', NULL, 20, 14, 5, NULL, '5 rondas', 6, 3, 1),
-    (11, 'Karen', NULL, 20, 14, 15, NULL, 'AFAP', 6, 3, 2),
-    (12, 'Amanda', NULL, 135, 95, 12, NULL, 'AFAP', 6, 3, 2),
-    (13, 'Jackie', NULL, 45, 35, 10, NULL, 'AFAP', 6, 3, 2),
-    (14, 'Diane', NULL, 225, 155, 10, 'Descansos cortos de 3 a 10 segundos entre rondas', '21-15-9', 3, 3, 2),
-    (15, 'Fran', NULL, 95, 65, 7, NULL, '21-15-9', 3, 3, 2),
-    (16, 'Elizabeth', NULL, 135, 95, 10, 'Se permiten descansos de varios segundos', '21-15-9', 3, 3, 2),
-    (17, 'Nancy', NULL, 95, 65, 5, NULL, '5 rondas', 3, 3, 1),
-    (18, 'Lynne', NULL, NULL, NULL, 5, 'Tanto tiempo como sea necesario entre rondas', '5 rondas de repeticiones al máximo', 1, 3, 1),
-    (19, 'Isabel', NULL, 135, 95, 6, NULL, 'AFAP', 6, 3, 2),
-    (20, 'Linda', NULL, NULL, NULL, 25, NULL, '10-9-8-7-6-5-4-3-2-1', 3, 3, 2),
-    (21, 'Grace', NULL, 135, 95, 5, 'Muy poco o nulo descanso entre repeticiones', 'AFAP', 6, 3, 2);
-
-#Propios del gimnasio
 INSERT INTO wod
     (id_wod, nombre, duracion_minutos, rx_masculino, rx_feminino, puntuacion_meta, descanso, descripcion, id_modalidad, id_categoria, id_tipo_puntuacion)
 VALUES
@@ -166,6 +139,32 @@ VALUES
     (19, 'Isabel', NULL, 135, 95, 6, NULL, 'AFAP', 6, 3, 2),
     (20, 'Linda', NULL, NULL, NULL, 25, NULL, '10-9-8-7-6-5-4-3-2-1', 3, 3, 2),
     (21, 'Grace', NULL, 135, 95, 5, 'Muy poco o nulo descanso entre repeticiones', 'AFAP', 6, 3, 2);
+
+#Propios del gimnasio
+INSERT INTO wod 
+	(id_wod, nombre, duracion_minutos, rx_masculino, rx_feminino, puntuacion_meta, descanso, descripcion, id_modalidad, id_categoria, id_tipo_puntuacion) 
+VALUES 
+    (22, 'Horst', 21, 225, 69, 6, 'Canis dingo', 'Adaptive solution-oriented time-frame', 5, 1, 3),
+    (23, 'Kristin', 24, 26, 146, 19, 'Coluber constrictor', 'Public-key grid-enabled hierarchy', 1, 1, 3),
+    (24, 'Winnah', 19, 30, 61, 175, 'Phoenicopterus ruber', 'Decentralized web-enabled framework', 6, 1, 3),
+    (25, 'Marlena', 20, 51, 123, 9, 'Gyps bengalensis', 'Self-enabling intermediate initiative', 4, 1, 1),
+    (26, 'Haroun', 15, 27, 152, 20, 'Cercopithecus aethiops', 'Pre-emptive mission-critical Graphic Interface', 6, 1, 2),
+    (27, 'Lauraine', 21, 129, 136, 7, 'Oreotragus oreotragus', 'Face to face upward-trending structure', 6, 1, 2),
+    (28, 'Yank', 24, 214, 54, 19, 'Streptopelia decipiens', 'Focused heuristic projection', 1, 1, 2),
+    (29, 'Stepha', 15, 219, 40, 16, 'Anastomus oscitans', 'Optional cohesive Graphical User Interface', 2, 1, 1),
+    (30, 'Marcos', 19, 134, 61, 100, 'Castor canadensis', 'Synergized national secured line', 5, 1, 3),
+    (31, 'Nevsa', 30, 84, 52, 120, 'Otocyon megalotis', 'Sharable directional groupware', 6, 1, 3),
+    (32, 'Nathalia', 30, 190, 134, 150, 'Laniarius ferrugineus', 'Realigned user-facing database', 4, 1, 3),
+    (33, 'Gwenneth', 24, 71, 63, 12, 'Dasypus novemcinctus', 'Decentralized attitude-oriented extranet', 4, 1, 1),
+    (34, 'Mathew', 15, 78, 121, 16, 'Naja sp.', 'Quality-focused mobile utilisation', 6, 1, 2),
+    (35, 'Talyah', 26, 59, 115, 10, 'Parus atricapillus', 'Persevering zero defect secured line', 3, 1, 2),
+    (36, 'Elvina', 26, 130, 33, 20, 'Laniaurius atrococcineus', 'Upgradable non-volatile support', 2, 1, 1),
+    (37, 'Lisle', 27, 103, 150, 14, 'Acanthaster planci', 'Automated bottom-line capacity', 5, 1, 2),
+    (38, 'Rogerio', 15, 150, 127, 18, 'Branta canadensis', 'Stand-alone heuristic hierarchy', 6, 1, 3),
+    (39, 'Nedi', 22, 182, 98, 18, 'Columba palumbus', 'Robust asynchronous superstructure', 6, 1, 1),
+    (40, 'Janet', 30, 157, 57, 12, 'Felis pardalis', 'Persevering tertiary installation', 3, 1, 1),
+    (41, 'Denys', 17, 65, 39, 17, 'Acridotheres tristis', 'Reverse-engineered optimizing artificial intelligence', 4, 1, 2),
+    (42, 'Cirilo', 18, 92, 154, 18, 'Choloepus hoffmani', 'Triple-buffered local leverage', 5, 1, 3);
 
 
 ###############################################################################################################################
@@ -576,7 +575,7 @@ insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (30,8893306841203,'RX',130,21);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (40,8572583082111,'RX',150,14);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (36,8692167711123,'RX+',145,24.31);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (50,8485706560202,'RX+',100,8.23.48);
+insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (50,8485706560202,'RX+',100,23.48);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (44,7484662472223,'SCALED',42,19);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (41,8321640930212,'RX',110,28.03);
 insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (29,8750319912203,'RX',35,150);
