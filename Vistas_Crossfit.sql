@@ -16,6 +16,59 @@ Vistas Requeridas:
 USE CROSSFIT;
 
 #1.Vista del Leaderboard del día, recuerde que los RX+ van primero, los RX van sguido y los scaled van de ultimo.
+CREATE PROCEDURE leaderboard_dia(_fecha DATE)
+BEGIN
+    DECLARE Fecha DATE;
+    SELECT _fecha INTO Fecha;
+
+    SELECT*
+    FROM (
+             SELECT p.dpi             DPI,
+                    p.nombres         Nombre,
+                    p.apellidos       Apellidos,
+                    w.nombre          'Nombre WoD',
+                    m.nombre          Modalidad,
+                    ds.record_wod     'Calificación WoD',
+                    CONCAT(CONVERT(ds.puntuacion_wod, DECIMAL(3,0)),' (',ds.peso,')') 'Puntuación',
+                    tp.descripcion   'Tipo Puntuación'
+             FROM detalle_sesion ds
+                      INNER JOIN personas p ON ds.dpi_atleta = p.dpi
+                      INNER JOIN sesion s ON ds.id_sesion = s.id_sesion
+                 AND s.fecha = Fecha
+                      INNER JOIN clase c ON s.id_clase = c.id_clase
+                      INNER JOIN wod w ON c.id_wod = w.id_wod
+                      INNER JOIN categoria_wod cw ON w.id_categoria = cw.id_categoria
+                      INNER JOIN modalidad m ON w.id_modalidad = m.id_modalidad
+                      INNER JOIN tipo_puntuacion tp ON w.id_tipo_puntuacion = tp.id_tipo_puntuacion
+                 AND tp.id_tipo_puntuacion = 2
+             ORDER BY ds.record_wod , ds.puntuacion_wod ASC) a
+    UNION ALL
+    SELECT *
+    FROM (
+             SELECT p.dpi             DPI,
+                    p.nombres         Nombre,
+                    p.apellidos       Apellidos,
+                    w.nombre          'Nombre WoD',
+                    m.nombre          Modalidad,
+                    ds.record_wod     'Calificación WoD',
+                    CONCAT(CONVERT(ds.puntuacion_wod, DECIMAL(3,0)),' (',ds.peso,')') 'Puntuación',
+                    tp.descripcion   'Tipo Puntuación'
+             FROM detalle_sesion ds
+                      INNER JOIN personas p ON ds.dpi_atleta = p.dpi
+                      INNER JOIN sesion s ON ds.id_sesion = s.id_sesion
+                 AND s.fecha = Fecha
+                      INNER JOIN clase c ON s.id_clase = c.id_clase
+                      INNER JOIN wod w ON c.id_wod = w.id_wod
+                      INNER JOIN categoria_wod cw ON w.id_categoria = cw.id_categoria
+                      INNER JOIN modalidad m ON w.id_modalidad = m.id_modalidad
+                      INNER JOIN tipo_puntuacion tp ON w.id_tipo_puntuacion = tp.id_tipo_puntuacion
+                 AND (tp.id_tipo_puntuacion = 1 OR tp.id_tipo_puntuacion = 3)
+             ORDER BY ds.record_wod ,ds.puntuacion_wod DESC) b;
+
+END;
+
+CALL leaderboard_dia('2020-02-03');
+
 
 #2.Vista de atletas que no están solventes.
 CREATE OR REPLACE VIEW atletas_insolventes AS
