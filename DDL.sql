@@ -249,6 +249,20 @@ CREATE TABLE IF NOT EXISTS historial_pr(
         REFERENCES detalle_especialidad(id_especialidad, id_movimiento)
 );
 
+/*Tabla Auxiliar para calcular el leaderboard de un día en específico*/
+CREATE TABLE IF NOT EXISTS leaderboard_temp(
+    dpi                 NUMERIC(20),
+    nombres             VARCHAR(100),
+    apellidos           VARCHAR(100),
+    nombre_wod          VARCHAR(100),
+    modalidad           VARCHAR(50),
+    record_wod          VARCHAR(10),
+    puntuacion_wod      DECIMAL(10,2),
+    peso                INT,
+    tipo_puntuacion     VARCHAR(50),
+    fecha               DATE
+);
+
 ##############################SECCIÓN DE TRIGGERS ##############################################
 /*
 Trigger que verifica que un atleta no intenta hacer una clase cuando ya tuvo otra ese mismo día.
