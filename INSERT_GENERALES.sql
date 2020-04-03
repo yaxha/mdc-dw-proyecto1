@@ -1,4 +1,12 @@
-/*INSERT GENERALES BASE DE DATOS DE CROSSFIT*/
+ /*
+PROYECTO CROSSFIT
+Curso: Diseño y Construcción de Data Warehouse
+Autores:
+    Lilian Rebeca Carrera Lemus
+    José Armando Barrios León
+	
+INSERT GENERALES BASE DE DATOS DE CROSSFIT
+*/
 
 USE CROSSFIT;
 
@@ -489,350 +497,76 @@ insert into clase (id_clase, observaciones, id_warmup, id_especialidad, id_wod) 
 
 ####################################################################################################################
 
+/*
+Procedimiento para generar clases:
+Procedimiento para guardar la misma clase para todas las sesiones del día.
+Omite el ingreso del entrenador porque se hará un update posterior agregando al entrenador
+*/
 
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (1, '2020/03/02', 25, 8485706560202, 8);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (2, '2020/01/10', 6, 6052751122013, 7);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (3, '2020/02/21', 16, 8796485272222, 1);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (4, '2020/03/10', 15, 9830241210222, 6);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (5, '2020/02/03', 28, 8262908402203, 5);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (6, '2020/02/03', 26, 6052751122013, 4);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (7, '2020/02/18', 14, 8262908402203, 6);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (8, '2020/02/15', 26, 9457378362113, 10);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (9, '2020/02/15', 20, 8485706560202, 11);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (10, '2020/03/21', 15, 9457378362113, 9);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (11, '2020/03/09', 4, 8262908402203, 7);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (12, '2020/02/12', 29, 8485706560202, 8);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (13, '2020/02/20', 22, 9830241210222, 1);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (14, '2020/02/27', 8, 9457378362113, 4);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (15, '2020/03/23', 26, 9457378362113, 5);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (16, '2020/02/06', 16, 8262908402203, 3);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (17, '2020/02/11', 8, 7334292970203, 2);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (18, '2020/01/22', 20, 9830241210222, 5);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (19, '2020/03/02', 18, 9457378362113, 3);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (20, '2020/02/06', 23, 8485706560202, 6);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (21, '2020/02/27', 11, 7501617290123, 7);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (22, '2020/02/20', 21, 8767631282023, 4);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (23, '2020/02/05', 16, 6052751122013, 3);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (24, '2020/02/15', 15, 8767631282023, 9);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (25, '2020/02/08', 24, 9830241210222, 10);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (26, '2020/01/11', 9, 9830241210222, 10);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (27, '2020/01/24', 3, 8796485272222, 3);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (28, '2020/02/07', 15, 8767631282023, 6);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (29, '2020/01/17', 9, 8485706560202, 2);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (30, '2020/02/13', 11, 8796485272222, 5);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (31, '2020/01/31', 22, 7501617290123, 7);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (32, '2020/03/20', 14, 6052751122013, 8);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (33, '2020/01/23', 11, 9830241210222, 5);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (34, '2020/02/03', 21, 9457378362113, 2);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (35, '2020/02/07', 27, 6052751122013, 6);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (36, '2020/03/03', 5, 8485706560202, 1);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (37, '2020/02/14', 7, 9457378362113, 3);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (38, '2020/02/24', 22, 9830241210222, 8);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (39, '2020/02/19', 13, 8485706560202, 8);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (40, '2020/03/20', 7, 7501617290123, 7);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (41, '2020/01/24', 2, 8796485272222, 4);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (42, '2020/01/03', 9, 9457378362113, 5);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (43, '2020/02/10', 5, 8542089321103, 4);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (44, '2020/01/29', 17, 8767631282023, 1);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (45, '2020/03/16', 4, 8542089321103, 2);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (46, '2020/02/03', 15, 7501617290123, 6);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (47, '2020/02/21', 7, 8796485272222, 2);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (48, '2020/03/12', 3, 9457378362113, 1);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (49, '2020/02/17', 5, 9457378362113, 2);
-insert into sesion (id_sesion, fecha, id_clase, dpi_entrenador, id_horario) values (50, '2020/03/12', 5, 8796485272222, 5);
+CREATE OR REPLACE PROCEDURE crear_sesiones_dia(_fecha DATE, _clase INT)
+BEGIN
+    DECLARE fecha_clase DATE;
+    DECLARE numero_clase INT;
+    DECLARE dia_semana INT;
+
+    SELECT _fecha INTO fecha_clase;
+    SELECT _clase INTO numero_clase;
+    SELECT DAYOFWEEK(fecha_clase) INTO dia_semana;
+
+    # Verificar que el día de la semana sea de lunes (2) a sábado (7)
+    IF(SELECT dia_semana BETWEEN 2 AND 7)
+    THEN
+        IF(SELECT dia_semana BETWEEN 2 AND 6) THEN
+            INSERT INTO sesion (fecha, id_clase, id_horario, dpi_entrenador)
+            SELECT fecha_clase,
+                   numero_clase,
+                   h.id_horario,
+                   (SELECT p.dpi
+                    FROM personas p
+                    WHERE p.id_tipo_persona = 2
+                    ORDER BY RAND()
+                    LIMIT 1)
+            FROM horario h
+            WHERE id_horario BETWEEN 1 AND 8;
+        ELSE
+            INSERT INTO sesion (fecha, id_clase, id_horario, dpi_entrenador)
+            SELECT fecha_clase,
+                   numero_clase,
+                   h.id_horario,
+                   (SELECT p.dpi
+                    FROM personas p
+                    WHERE p.id_tipo_persona = 2
+                    ORDER BY RAND()
+                    LIMIT 1)
+            FROM horario h
+            WHERE id_horario BETWEEN 9 AND 11;
+        END IF;
+    END IF;
+END;
+
+
+CALL crear_sesiones_dia('2020-01-15', 1);
+CALL crear_sesiones_dia('2020-01-16', 2);
+CALL crear_sesiones_dia('2020-01-17', 3);
+CALL crear_sesiones_dia('2020-01-18', 4);
+CALL crear_sesiones_dia('2020-01-20', 5);
+CALL crear_sesiones_dia('2020-01-21', 6);
+CALL crear_sesiones_dia('2020-01-22', 7);
+CALL crear_sesiones_dia('2020-01-23', 8);
+CALL crear_sesiones_dia('2020-01-24', 9);
+CALL crear_sesiones_dia('2020-01-25', 10);
+CALL crear_sesiones_dia('2020-01-27', 11);
+CALL crear_sesiones_dia('2020-01-28', 12);
+CALL crear_sesiones_dia('2020-01-29', 13);
+CALL crear_sesiones_dia('2020-01-30', 14);
 
 
 #####################################################################################################################################
 
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (28,8321640930212,'RX+',100,17.35);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (42,8115482820110,'RX+',40,155);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (48,9032290801220,'RX',35,28.20);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (13,9779331030221,'RX',33,17);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (15,8626524740213,'RX',60,100);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (48,9922839831010,'RX',35,29.01);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (36,6071475412222,'SCALED',105,37.32);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (41,6052751122013,'SCALED',105,34.12);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (22,8224787862202,'SCALED',50,12);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (18,9088943782010,'RX+',35,176);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (48,8153268261223,'RX',60,26.05);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (34,8661815922221,'RX',63,12);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (13,7501617290123,'SCALED',33,15);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (33,9679915730001,'RX',130,20);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (6,8452434922102,'RX',60,100);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (34,8796485272222,'RX',63,13);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (43,5377856371120,'RX',95,27.14);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (6,9557517452223,'RX',60,102);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (33,9779331030221,'SCALED',125,20);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (48,9723743210023,'RX',35,28.45);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (37,9088943782010,'SCALED',98,15.02);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (1,9688940852111,'RX+',125,28.02);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (1,7830588762103,'RX',120,30);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (40,7077125932123,'SCALED',122,15.21);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (38,8160967652200,'SCALED',120,15);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (9,9055965592213,'RX',60,175);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (41,9222499962121,'SCALED',100,32.45);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (10,8160967652200,'RX+',195,15.36);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (30,8893306841203,'RX',130,21);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (40,8572583082111,'RX',150,14);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (36,8692167711123,'RX+',145,24.31);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (50,8485706560202,'RX+',100,23.48);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (44,7484662472223,'SCALED',42,19);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (41,8321640930212,'RX',110,28.03);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (29,8750319912203,'RX',35,150);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (44,6415180661111,'SCALED',40,21.12);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (27,7484662472223,'RX',35,30);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (30,9556965740012,'RX+',135,21);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (8,9541115331200,'RX',135,100);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (24,9318279430100,'SCALED',120,20.29);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (11,7077125932123,'RX+',195,8.07);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (20,9679915730001,'SCALED',60,37.25);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (15,9132262182123,'SCALED',60,110);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (12,9956216282222,'SCALED',40,8);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (33,8224787862202,'SCALED',30,17);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (28,9618322402123,'RX',95,19);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (4,8153268261223,'SCALED',120,21.59);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (12,8226304770221,'SCALED',45,7);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (1,9965958531122,'RX+',120,27.12);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (27,9544181592123,'RX+',40,24.12);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (36,9092554091013,'RX+',140,22.35);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (30,6052751122013,'SCALED',120,18);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (14,5377856371120,'SCALED',75,110);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (49,9186864262203,'RX+',142,24.04);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (7,3669658330202,'SCALED',40,35.34);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (25,9603305861113,'SCALED',55,98);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (27,7266934750223,'RX+',42,25.02);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (16,9438298670223,'RX',52,120);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (49,9556965740012,'RX',135,27.16);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (43,9467022142001,'RX',102,26.36);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (20,7501617290123,'SCALED',45,36.21);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (24,3669658330202,'RX+',130,17.25);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (25,7830588762103,'SCALED',52,95);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (3,9751925631020,'RX+',85,125);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (33,9032290801220,'RX+',35,20);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (14,8224787862202,'RX+',85,120);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (42,6524775062220,'RX+',40,157);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (16,9688940852111,'RX+',60,130);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (49,7465066732023,'SCALED',102,37.45);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (42,9438298670223,'RX',35,150);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (11,9563520020122,'SCALED',100,15);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (37,7382755712103,'SCALED',95,17);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (1,8626524740213,'SCALED',100,35.27);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (15,8692167711123,'SCALED',50,95);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (1,9259920190223,'RX+',128,28.09);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (9,9830241210222,'RX+',70,200);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (23,8626524740213,'SCALED',45,115);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (9,9438298670223,'RX+',75,201);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (49,9688940852111,'RX',135,25.41);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (45,9438298670223,'SCALED',100,11.2);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (24,5377856371120,'RX',135,100);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (45,9318279430100,'SCALED',120,20.29);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (1,7077125932123,'RX+',195,23.07);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (11,9679915730001,'SCALED',60,3);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (23,9132262182123,'SCALED',60,110);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (37,9956216282222,'SCALED',40,8);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (15,8224787862202,'SCALED',30,17);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (16,8692167711123,'RX+',60,130);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (49,9438298670223,'SCALED',102,36.45);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (42,3669658330202,'RX',35,150);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (11,5377856371120,'SCALED',100,15);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (37,8224787862202,'SCALED',95,17);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (1,9603305861113,'SCALED',100,35.27);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (15,9438298670223,'SCALED',50,95);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (1,9186864262203,'RX+',128,28.09);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (9,6524775062220,'RX+',70,200);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (44,9092554091013,'SCALED',40,21.12);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (27,5377856371120,'RX',35,30.22);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (30,9132262182123,'RX+',135,21);
-insert into detalle_sesion (id_sesion, dpi_atleta, record_wod, peso, puntuacion_wod) values (11,7484662472223,'SCALED',100,15);
+
 
 
 ################################################################################################################################
 
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (18,'9088943782010', 1, 5, 31);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (18,'9088943782010', 1, 6, 102);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (37,'9088943782010', 1, 6, 165);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (27,'5377856371120', 3, 5, 77);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (27,'7266934750223', 3, 5, 91);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (27,'7484662472223', 3, 5, 25);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (27,'9544181592123', 3, 5, 52);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (48,'8153268261223', 3, 5, 184);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (48,'9032290801220', 3, 5, 166);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (48,'9723743210023', 3, 5, 77);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (48,'9922839831010', 3, 5, 91);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (14,'8224787862202', 3, 5, 7);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (3,'9751925631020', 3, 5, 26);
-
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (16,'9438298670223', 3, 5, 74);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (16,'9688940852111', 3, 5, 40);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (23,'8626524740213', 3, 5, 177);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (23,'9132262182123', 3, 5, 166);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (44,'6415180661111', 3, 5, 99);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (44,'7484662472223', 3, 5, 198);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (12,'9956216282222', 4, 5, 40);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (7,'3669658330202', 1, 6, 124);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (9,'6524775062220', 1, 6, 102);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (40,'8572583082111', 3, 6, 105);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (14,'5377856371120', 3, 6, 139);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (14,'8224787862202', 3, 6, 178);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (3,'9751925631020', 3, 6, 76);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (16,'8692167711123', 3, 6, 47);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (11,'7484662472223', 2, 7, 162);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (11,'9563520020122', 2, 7, 152);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (11,'9679915730001', 2, 7, 73);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (45,'9318279430100', 2, 7, 109);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (45,'9438298670223', 2, 7, 129);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (49,'7465066732023', 4, 8, 132);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (49,'9186864262203', 4, 8, 14);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (49,'9438298670223', 4, 8, 77);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (49,'9556965740012', 4, 8, 143);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (49,'9688940852111', 4, 8, 84);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (48,'9922839831010', 3, 11, 88);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (44,'6415180661111', 3, 11, 180);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (44,'7484662472223', 3, 11, 8);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (44,'9092554091013', 3, 11, 101);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (22,'8224787862202', 3, 11, 81);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (34,'8661815922221', 3, 11, 102);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (34,'8796485272222', 3, 11, 68);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (6,'8452434922102', 3, 11, 34);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (6,'9557517452223', 3, 11, 167);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (8,'9541115331200', 3, 11, 132);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (15,'8224787862202', 3, 11, 162);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (15,'8626524740213', 3, 11, 14);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (15,'8692167711123', 3, 11, 183);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (15,'9132262182123', 3, 11, 72);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (15,'9438298670223', 3, 11, 14);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (1,'9965958531122', 2, 18, 164);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (7,'3669658330202', 1, 19, 95);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (9,'6524775062220', 1, 19, 185);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (9,'9055965592213', 1, 19, 39);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (9,'9438298670223', 1, 19, 40);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (9,'9830241210222', 1, 19, 82);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (18,'9088943782010', 1, 19, 91);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (27,'5377856371120', 3, 19, 10);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (27,'7266934750223', 3, 19, 180);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (22,'8224787862202', 3, 19, 173);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (34,'8661815922221', 3, 19, 17);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (34,'8796485272222', 3, 19, 168);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (6,'8452434922102', 3, 19, 188);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (6,'9557517452223', 3, 19, 36);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (8,'9541115331200', 3, 19, 19);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (15,'8224787862202', 3, 19, 186);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (15,'8626524740213', 3, 19, 72);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (15,'8692167711123', 3, 19, 6);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (30,'8893306841203', 2, 21, 92);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (30,'9132262182123', 2, 21, 98);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (30,'9556965740012', 2, 21, 16);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (33,'8224787862202', 2, 21, 185);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (33,'9032290801220', 2, 21, 79);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (33,'9679915730001', 2, 21, 39);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (33,'9779331030221', 2, 21, 160);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (4,'8153268261223', 2, 21, 82);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (10,'8160967652200', 2, 21, 133);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (24,'3669658330202', 2, 21, 18);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (24,'5377856371120', 2, 21, 93);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (24,'9318279430100', 2, 21, 13);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (28,'8321640930212', 2, 21, 183);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (28,'9618322402123', 2, 21, 77);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (1,'7077125932123', 2, 21, 36);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (1,'7830588762103', 2, 21, 148);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (1,'8626524740213', 2, 21, 36);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (1,'9186864262203', 2, 21, 136);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (1,'9259920190223', 2, 21, 172);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (1,'9603305861113', 2, 21, 51);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (1,'9688940852111', 2, 21, 142);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (1,'9965958531122', 2, 21, 158);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (7,'3669658330202', 1, 22, 165);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (9,'6524775062220', 1, 22, 152);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (9,'9055965592213', 1, 22, 64);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (9,'9438298670223', 1, 22, 63);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (9,'9830241210222', 1, 22, 124);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (18,'9088943782010', 1, 22, 33);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (27,'5377856371120', 3, 22, 191);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (27,'7266934750223', 3, 22, 57);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (27,'7484662472223', 3, 22, 115);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (27,'9544181592123', 3, 22, 3);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (48,'8153268261223', 3, 22, 69);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (48,'9032290801220', 3, 22, 139);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (48,'9723743210023', 3, 22, 89);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (48,'9922839831010', 3, 22, 26);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (37,'7382755712103', 3, 22, 63);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (37,'8224787862202', 3, 22, 39);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (37,'9088943782010', 3, 22, 7);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (37,'9956216282222', 3, 22, 120);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (40,'7077125932123', 3, 22, 177);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (40,'8572583082111', 3, 22, 128);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (14,'8224787862202', 3, 22, 158);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (3,'9751925631020', 3, 22, 67);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (16,'8692167711123', 3, 22, 60);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (16,'9438298670223', 3, 22, 98);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (16,'9688940852111', 3, 22, 111);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (29,'8750319912203', 4, 22, 25);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (42,'3669658330202', 4, 22, 38);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (42,'6524775062220', 4, 22, 118);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (42,'8115482820110', 4, 22, 74);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (42,'9438298670223', 4, 22, 16);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (13,'7501617290123', 4, 22, 61);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (13,'9779331030221', 4, 22, 58);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (38,'8160967652200', 4, 22, 106);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (20,'7501617290123', 4, 22, 155);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (20,'9679915730001', 4, 22, 60);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (25,'7830588762103', 4, 22, 34);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (25,'9603305861113', 4, 22, 189);
-
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (12,'8226304770221', 4, 22, 44);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (12,'9956216282222', 4, 22, 54);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (27,'5377856371120', 3, 23, 138);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (27,'7266934750223', 3, 23, 130);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (27,'7484662472223', 3, 23, 35);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (8,'9541115331200', 3, 23, 42);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (15,'8224787862202', 3, 23, 167);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (15,'8626524740213', 3, 23, 109);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (15,'8692167711123', 3, 23, 44);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (15,'9132262182123', 3, 23, 95);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (15,'9438298670223', 3, 23, 143);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (50,'8485706560202', 4, 25, 45);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (29,'8750319912203', 4, 25, 115);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (42,'3669658330202', 4, 25, 39);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (42,'6524775062220', 4, 25, 52);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (42,'8115482820110', 4, 25, 146);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (42,'9438298670223', 4, 25, 171);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (13,'7501617290123', 4, 25, 19);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (13,'9779331030221', 4, 25, 183);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (38,'8160967652200', 4, 25, 60);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (20,'7501617290123', 4, 25, 149);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (20,'9679915730001', 4, 25, 168);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (25,'7830588762103', 4, 25, 193);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (25,'9603305861113', 4, 25, 60);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (12,'8226304770221', 4, 25, 123);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (12,'9956216282222', 4, 25, 36);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (7,'3669658330202', 1, 26, 11);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (9,'6524775062220', 1, 26, 146);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (9,'9055965592213', 1, 26, 100);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (9,'9438298670223', 1, 26, 60);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (9,'9830241210222', 1, 26, 1);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (18,'9088943782010', 1, 26, 24);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (41,'6052751122013', 2, 26, 119);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (41,'8321640930212', 2, 26, 66);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (41,'9222499962121', 2, 26, 158);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (11,'5377856371120', 2, 26, 190);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (11,'7077125932123', 2, 26, 77);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (11,'7484662472223', 2, 26, 16);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (11,'9563520020122', 2, 26, 51);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (11,'9679915730001', 2, 26, 7);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (45,'9318279430100', 2, 26, 84);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (45,'9438298670223', 2, 26, 198);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (41,'6052751122013', 2, 27, 3);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (41,'8321640930212', 2, 27, 83);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (41,'9222499962121', 2, 27, 82);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (11,'5377856371120', 2, 27, 160);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (12,'8226304770221', 4, 27, 140);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (12,'9956216282222', 4, 27, 76);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (41,'6052751122013', 2, 34, 162);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (41,'8321640930212', 2, 34, 18);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (41,'9222499962121', 2, 34, 148);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (11,'5377856371120', 2, 34, 86);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (41,'6052751122013', 2, 37, 93);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (41,'8321640930212', 2, 37, 125);
-INSERT INTO historial_pr (id_sesion, dpi_atleta, id_especialidad, id_movimiento, peso_pr) VALUE (41,'9222499962121', 2, 37, 104);
 
 COMMIT;
