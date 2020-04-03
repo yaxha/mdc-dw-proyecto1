@@ -415,5 +415,53 @@ CREATE TRIGGER trg_insert_pr
                 SET MESSAGE_TEXT = 'Este movimiento no permite records personales.';
         END IF;
     END;
+	
+/*
+Procedimiento para generar clases:
+Procedimiento para guardar la misma clase para todas las sesiones del día.
+Omite el ingreso del entrenador porque se hará un update posterior agregando al entrenador
+*/
+
+CREATE PROCEDURE crear_sesiones_dia(_fecha DATE, _clase INT)
+BEGIN
+    DECLARE fecha_clase DATE;
+    DECLARE numero_clase INT;
+    DECLARE dia_semana INT;
+
+    SELECT _fecha INTO fecha_clase;
+    SELECT _clase INTO numero_clase;
+    SELECT DAYOFWEEK(fecha_clase) INTO dia_semana;
+
+    # Verificar que el día de la semana sea de lunes (2) a sábado (7)
+    IF(SELECT dia_semana BETWEEN 2 AND 7)
+    THEN
+        IF(SELECT dia_semana BETWEEN 2 AND 6) THEN
+            INSERT INTO sesion (fecha, id_clase, id_horario, dpi_entrenador)
+            SELECT fecha_clase,
+                   numero_clase,
+                   h.id_horario,
+                   (SELECT p.dpi
+                    FROM personas p
+                    WHERE p.id_tipo_persona = 2
+                    ORDER BY RAND()
+                    LIMIT 1)
+            FROM horario h
+            WHERE id_horario BETWEEN 1 AND 8;
+        ELSE
+            INSERT INTO sesion (fecha, id_clase, id_horario, dpi_entrenador)
+            SELECT fecha_clase,
+                   numero_clase,
+                   h.id_horario,
+                   (SELECT p.dpi
+                    FROM personas p
+                    WHERE p.id_tipo_persona = 2
+                    ORDER BY RAND()
+                    LIMIT 1)
+            FROM horario h
+            WHERE id_horario BETWEEN 9 AND 11;
+        END IF;
+    END IF;
+END;
+
 
 COMMIT;
