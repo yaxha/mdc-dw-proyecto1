@@ -199,7 +199,7 @@ CREATE TABLE IF NOT EXISTS sesion(
 CREATE TABLE IF NOT EXISTS detalle_sesion(
     id_sesion      INT  NOT NULL,
     dpi_atleta     NUMERIC(20)  NOT NULL,
-    record_wod     VARCHAR(10),
+    record_wod     INT,  #1 es para RX+, 2 para RX y 3 para SCALED
     peso        INT,
     puntuacion_wod    DECIMAL(10, 2),
     PRIMARY KEY (id_sesion, dpi_atleta),
