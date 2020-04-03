@@ -503,7 +503,7 @@ Procedimiento para guardar la misma clase para todas las sesiones del día.
 Omite el ingreso del entrenador porque se hará un update posterior agregando al entrenador
 */
 
-CREATE OR REPLACE PROCEDURE crear_sesiones_dia(_fecha DATE, _clase INT)
+CREATE PROCEDURE crear_sesiones_dia(_fecha DATE, _clase INT)
 BEGIN
     DECLARE fecha_clase DATE;
     DECLARE numero_clase INT;
